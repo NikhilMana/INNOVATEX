@@ -85,6 +85,6 @@ export const contactInfo = {
   department: "CSE — Artificial Intelligence & Machine Learning",
   institution: "Maharaja Institute of Technology, Mysore",
   address: "Belawadi, Srirangapatna Taluk, Mandya District, Karnataka 571477",
-  email: "innovatex@mitmysore.in",
-  phone: "+91 00000 00000",
+  email: "Hodaiml@gmail.com",
+  phone: "+91 80503 16746",
 };

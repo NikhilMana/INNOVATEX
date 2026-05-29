@@ -301,10 +301,15 @@ function Tracks() {
                   <p className="text-muted text-sm leading-relaxed">
                     {track.description}
                   </p>
-                  <button className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors">
+                  <a 
+                    href={visionX.registerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors"
+                  >
                     Register
                     <ArrowRight size={12} />
-                  </button>
+                  </a>
                 </div>
               </GlassCard>
             );
