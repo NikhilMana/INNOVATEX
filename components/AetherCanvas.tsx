@@ -44,7 +44,6 @@ export default function AetherCanvas() {
     const ctx = canvas?.getContext('2d');
     if (!canvas || !ctx) return;
 
-    // Drawing function
     const renderFrame = (frameIndex: number) => {
       let idx = Math.round(frameIndex);
       if (idx >= FRAME_COUNT) idx = FRAME_COUNT - 1;
@@ -54,18 +53,30 @@ export default function AetherCanvas() {
       if (!img) return;
 
       const parent = canvas.parentElement;
-      if (parent) {
-        canvas.width = parent.clientWidth;
-        canvas.height = parent.clientHeight;
+      if (!parent) return;
+
+      const dpr = window.devicePixelRatio || 1;
+      const rect = parent.getBoundingClientRect();
+      
+      if (canvas.width !== rect.width * dpr || canvas.height !== rect.height * dpr) {
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        canvas.style.width = `${rect.width}px`;
+        canvas.style.height = `${rect.height}px`;
+        ctx.scale(dpr, dpr);
       }
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, rect.width, rect.height);
 
-      const hRatio = canvas.width / img.width;
-      const vRatio = canvas.height / img.height;
-      const ratio = Math.min(hRatio, vRatio);
-      const centerShift_x = (canvas.width - img.width * ratio) / 2;
-      const centerShift_y = (canvas.height - img.height * ratio) / 2;
+      const hRatio = rect.width / img.width;
+      const vRatio = rect.height / img.height;
+      
+      // On mobile, use object-cover style scaling so it isn't tiny
+      const isMobile = rect.width < 768;
+      const ratio = isMobile ? Math.max(hRatio, vRatio) * 0.9 : Math.min(hRatio, vRatio);
+
+      const centerShift_x = (rect.width - img.width * ratio) / 2;
+      const centerShift_y = (rect.height - img.height * ratio) / 2;
 
       ctx.drawImage(
         img,

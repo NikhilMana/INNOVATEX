@@ -116,44 +116,51 @@ function Hero() {
 
           <div
             data-reveal
-            className="flex flex-wrap items-center justify-center gap-4 pt-2"
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 pt-2 w-full max-w-full"
           >
-            <div className="flex items-center gap-2 glass-card rounded-full px-4 py-2 text-sm">
-              <Calendar size={14} className="text-purple-400" />
+            <div className="flex items-center gap-2 glass-card rounded-full px-4 py-2 text-xs sm:text-sm text-center">
+              <Calendar size={14} className="text-purple-400 shrink-0" />
               <span>{visionX.dateLong}</span>
             </div>
-            <div className="flex items-center gap-2 glass-card rounded-full px-4 py-2 text-sm">
-              <MapPin size={14} className="text-purple-400" />
-              <span>{visionX.venue}</span>
+            <div className="flex items-center gap-2 glass-card rounded-full px-4 py-2 text-xs sm:text-sm text-center">
+              <MapPin size={14} className="text-purple-400 shrink-0" />
+              <span className="truncate max-w-[200px] sm:max-w-none">{visionX.venue}</span>
             </div>
           </div>
 
-          <div data-reveal className="flex justify-center pt-6">
-            <Countdown target={visionX.date} />
+          <div data-reveal className="flex justify-center pt-6 w-full max-w-[100vw] overflow-hidden">
+            <div className="scale-75 sm:scale-100 transform origin-center">
+              <Countdown target={visionX.date} />
+            </div>
           </div>
 
           <div
             data-reveal
-            className="flex flex-wrap items-center justify-center gap-4 pt-4"
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 pt-4 w-full"
           >
-            <Button size="lg" icon={<ArrowRight size={18} />}>
-              <a href={visionX.registerUrl} target="_blank" rel="noopener noreferrer">Register Now</a>
-            </Button>
-            {visionX.feedbackUrl && (
-              <Button size="lg" variant="secondary">
-                <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer">Feedback Form</a>
+            <a href={visionX.registerUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" icon={<ArrowRight size={18} />} fullWidth>
+                Register Now
               </Button>
-            )}
-            <Button
-              variant="secondary"
-              size="lg"
-              icon={<Download size={16} />}
-              iconPosition="left"
-            >
-              <a href={visionX.brochureUrl} target="_blank" rel="noopener noreferrer">
-                Download Brochure
+            </a>
+            {visionX.feedbackUrl && (
+              <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" variant="secondary" fullWidth>
+                  Feedback Form
+                </Button>
               </a>
-            </Button>
+            )}
+            <a href={visionX.brochureUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button
+                variant="secondary"
+                size="lg"
+                icon={<Download size={16} />}
+                iconPosition="left"
+                fullWidth
+              >
+                Download Brochure
+              </Button>
+            </a>
           </div>
         </div>
       </div>

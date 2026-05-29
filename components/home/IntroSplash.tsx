@@ -97,7 +97,7 @@ export function IntroSplash() {
           autoPlay 
           muted 
           playsInline 
-          className="w-full h-full object-cover" 
+          className="w-full h-full object-contain scale-150 md:scale-100" 
         />
       </div>
 
