@@ -70,13 +70,13 @@ export const visionX: VisionXContent = {
   tagline: "CROSS THE HORIZON CREATE THE FUTURE",
 
   /* Fest date */
-  date: "2026-06-04T09:00:00+05:30",
-  dateLong: "June 4, 2026",
+  date: "2026-06-05T09:00:00+05:30",
+  dateLong: "June 5, 2026",
   venue: "Maharaja Institute of Technology, Mysore",
 
   /* Overview from brochure */
   overview:
-    "VisionX is an inter-college technical fest organized by the Department of Computer Science and Engineering – Artificial Intelligence & Machine Learning, in association with the Student Club – Innovatex, held at Maharaja Institute of Technology, Mysore, on 4th of June 2026. It is a celebration of technology, creativity, and innovation, bringing together some of the brightest minds to compete, collaborate, and create. The fest features flagship events — Robogenesis, BrandVerse — each designed to test different dimensions of technical expertise, problem-solving, and teamwork. VisionX aims to inspire students to push boundaries, think beyond the ordinary, and showcase their talents in a dynamic and engaging environment that blends fun with learning.",
+    "VisionX is an inter-college technical fest organized by the Department of Computer Science and Engineering – Artificial Intelligence & Machine Learning, in association with the Student Club – Innovatex, held at Maharaja Institute of Technology, Mysore, on 5th of June 2026. It is a celebration of technology, creativity, and innovation, bringing together some of the brightest minds to compete, collaborate, and create. The fest features flagship events — Robogenesis, BrandVerse — each designed to test different dimensions of technical expertise, problem-solving, and teamwork. VisionX aims to inspire students to push boundaries, think beyond the ordinary, and showcase their talents in a dynamic and engaging environment that blends fun with learning.",
 
   /* TODO: confirm KPIs from brochure */
   kpis: [
@@ -102,18 +102,11 @@ export const visionX: VisionXContent = {
       format: "talk",
       icon: "mic",
     },
-    {
-      id: "relay-brand",
-      title: "Relay",
-      description: "Build a Brand in a relay format challenge.",
-      format: "competition",
-      icon: "layers",
-    },
   ],
 
   schedule: [
     {
-      date: "JUN 04",
+      date: "JUN 05",
       label: "VisionX 2026",
       sessions: [
         {
@@ -139,12 +132,6 @@ export const visionX: VisionXContent = {
           title: "BrandVerse — AI Conclave",
           venue: "Seminar Hall",
           format: "talk",
-        },
-        {
-          time: "14:00",
-          title: "Relay — Build a Brand",
-          venue: "Lab Block",
-          format: "competition",
         },
         {
           time: "16:00",
@@ -217,7 +204,7 @@ export const visionX: VisionXContent = {
   faqs: [
     {
       q: "Who can attend Vision X?",
-      a: "Students, faculty, and industry guests are welcome. Some events (Robogenesis, Relay) require pre-registration.",
+      a: "Students, faculty, and industry guests are welcome. Some events (like Robogenesis) require pre-registration.",
     },
     {
       q: "Is there a registration fee?",
@@ -241,7 +228,6 @@ export const visionX: VisionXContent = {
     },
   ],
 
-  registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc5AzoVq5hm6DNC_WGkoAEEffK1KmvNmx-6RRkPDLu4H9u5tA/viewform?usp=header",
-  feedbackUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6TuL9uxv791thUJklHKpcjDONz2PP7ybOQzVwzoOiclQrpQ/viewform?usp=header",
+  registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6TuL9uxv791thUJklHKpcjDONz2PP7ybOQzVwzoOiclQrpQ/viewform?usp=header",
   brochureUrl: "/vision-x-brochure.pdf",
 };

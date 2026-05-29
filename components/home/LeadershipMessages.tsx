@@ -69,7 +69,7 @@ function MessageCard({
             {title}
           </p>
           
-          <p className={`text-lg text-white/60 leading-relaxed italic border-purple-500/50 text-left ${reversed ? 'border-r-4 pr-6 text-right' : 'border-l-4 pl-6 text-left'}`}>
+          <p className={`text-base md:text-lg text-white/60 leading-relaxed italic border-purple-500/50 text-left border-l-4 pl-4 ${reversed ? 'md:text-right md:border-l-0 md:border-r-4 md:pr-6 md:pl-0' : 'md:pl-6'}`}>
             "{quote}"
           </p>
         </div>
