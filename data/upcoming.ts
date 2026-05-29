@@ -14,11 +14,11 @@ export interface UpcomingEvent {
 export const upcomingEvents: UpcomingEvent[] = [
   {
     id: "vision-x",
-    date: "2025",
-    month: "DEC",
-    day: "TBD",
+    date: "2026",
+    month: "JUNE",
+    day: "04",
     title: "Vision X",
-    subtitle: "Department Fest 2025",
+    subtitle: "Department Fest 2026",
     description:
       "The flagship Department Fest — bringing together hackathons, talks, workshops, and a tech expo under one roof. Where tomorrow begins.",
     href: "/events/vision-x",

@@ -90,13 +90,11 @@ function EventCard({ event }: { event: EventEntry }) {
 
               <div className="relative flex items-start justify-between">
                 {event.logo ? (
-                  <div className="h-14 w-14 rounded-2xl overflow-hidden glass-card-strong p-1">
-                    <Image
+                  <div className="h-14 rounded-2xl overflow-hidden glass-card-strong p-2 flex items-center justify-center min-w-[3.5rem]">
+                    <img
                       src={event.logo}
                       alt={event.title}
-                      width={56}
-                      height={56}
-                      className="h-full w-full object-cover rounded-xl"
+                      className="h-full w-auto object-contain rounded-xl"
                     />
                   </div>
                 ) : (

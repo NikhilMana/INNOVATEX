@@ -13,6 +13,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { ImageGallery } from "@/components/ui/ImageGallery";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 
 export interface EventPageData {
@@ -41,6 +42,7 @@ export function EventPageTemplate({ data }: { data: EventPageData }) {
         <Overview data={data} />
         <Timeline data={data} />
         <Impact data={data} />
+        <Gallery data={data} />
         <CTA data={data} />
       </main>
       <Footer />
@@ -121,15 +123,13 @@ function Hero({ data }: { data: EventPageData }) {
           <div className="lg:col-span-5">
             <div
               data-reveal
-              className={`relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden bg-gradient-to-br ${data.heroGradient} shadow-glow-lg`}
+              className={`relative w-full max-w-md mx-auto rounded-3xl overflow-hidden bg-gradient-to-br ${data.heroGradient} shadow-glow-lg flex items-center justify-center p-8`}
             >
               {data.logo ? (
-                <Image
+                <img
                   src={data.logo}
                   alt={data.title}
-                  fill
-                  priority
-                  className="object-cover"
+                  className="w-full h-auto object-contain rounded-xl"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -267,6 +267,16 @@ function Impact({ data }: { data: EventPageData }) {
         </div>
       </div>
     </section>
+  );
+}
+
+function Gallery({ data }: { data: EventPageData }) {
+  if (!data.gallery || data.gallery.length === 0) return null;
+  
+  return (
+    <div className="relative overflow-hidden bg-black/50 border-y border-white/5">
+      <ImageGallery images={data.gallery} />
+    </div>
   );
 }
 

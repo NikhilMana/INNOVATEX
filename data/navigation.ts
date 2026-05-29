@@ -23,7 +23,7 @@ export const navigation: NavItem[] = [
       {
         label: "Vision X",
         href: "/events/vision-x",
-        description: "Department Fest 2025 — upcoming flagship",
+        description: "Department Fest 2026 — upcoming flagship",
         badge: "FLAGSHIP",
       },
       {
@@ -37,14 +37,9 @@ export const navigation: NavItem[] = [
         description: "Industry talks & speaker series",
       },
       {
-        label: "Aroohan",
-        href: "/events/aroohan",
+        label: "Aarohan",
+        href: "/events/aarohan",
         description: "Skill-building workshops",
-      },
-      {
-        label: "InnovateX",
-        href: "/events/innovatex",
-        description: "Hackathons & build sprints",
       },
     ],
   },

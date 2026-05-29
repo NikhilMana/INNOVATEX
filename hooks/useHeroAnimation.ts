@@ -26,6 +26,7 @@ export function useHeroAnimation(rootRef: RefObject<HTMLElement | null>) {
       const sub = rootRef.current!.querySelector("[data-hero-sub]");
       const ctas = rootRef.current!.querySelectorAll("[data-hero-cta]");
       const robot = rootRef.current!.querySelector("[data-hero-robot]");
+      const robotVisual = rootRef.current!.querySelector("[data-robot-visual]");
       const stats = rootRef.current!.querySelectorAll("[data-hero-stat]");
 
       if (reduced) {
@@ -33,6 +34,7 @@ export function useHeroAnimation(rootRef: RefObject<HTMLElement | null>) {
           [pill, headlineWords, headlineGradient, sub, ctas, robot, stats],
           { opacity: 1, y: 0, x: 0, scale: 1, rotate: 0 }
         );
+        if (robotVisual) gsap.set(robotVisual, { opacity: 1, scale: 1 });
         return;
       }
 
@@ -42,9 +44,35 @@ export function useHeroAnimation(rootRef: RefObject<HTMLElement | null>) {
       gsap.set(sub, { opacity: 0, y: 30 });
       gsap.set(ctas, { opacity: 0, y: 24, scale: 0.95 });
       gsap.set(stats, { opacity: 0, y: 20 });
-      if (robot) gsap.set(robot, { opacity: 0, x: 80, scale: 0.85 });
+      if (robot) gsap.set(robot, { opacity: 0, y: 40, scale: 0.9 });
+      if (robotVisual) {
+        gsap.set(robotVisual, {
+          opacity: 0,
+          scale: 0.75,
+          rotateY: -25,
+          transformPerspective: 900,
+        });
+      }
 
-      tl.to(pill, { opacity: 1, y: 0, duration: 0.6 })
+      if (robot && robotVisual) {
+        tl.to(
+          robot,
+          { opacity: 1, y: 0, scale: 1, duration: 1, ease: "expo.out" },
+          0
+        ).to(
+          robotVisual,
+          {
+            opacity: 1,
+            scale: 1,
+            rotateY: 0,
+            duration: 1.3,
+            ease: "expo.out",
+          },
+          0.05
+        );
+      }
+
+      tl.to(pill, { opacity: 1, y: 0, duration: 0.6 }, "-=0.7")
         .to(
           headlineWords,
           {
@@ -55,7 +83,7 @@ export function useHeroAnimation(rootRef: RefObject<HTMLElement | null>) {
             stagger: 0.08,
             ease: "expo.out",
           },
-          "-=0.3"
+          "-=0.5"
         )
         .to(
           headlineGradient,
@@ -90,20 +118,6 @@ export function useHeroAnimation(rootRef: RefObject<HTMLElement | null>) {
           },
           "-=0.4"
         );
-
-      if (robot) {
-        tl.to(
-          robot,
-          {
-            opacity: 1,
-            x: 0,
-            scale: 1,
-            duration: 1.1,
-            ease: "expo.out",
-          },
-          "-=1.4"
-        );
-      }
 
       const onSplashDone = () => tl.play();
       window.addEventListener("splash-done", onSplashDone);

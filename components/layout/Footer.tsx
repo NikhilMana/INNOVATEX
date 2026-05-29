@@ -118,10 +118,17 @@ export function Footer() {
             © {new Date().getFullYear()} InnovateX — MIT Mysore CSE AI & ML. All
             rights reserved.
           </p>
-          <p className="flex items-center gap-1">
-            Built with{" "}
-            <span className="text-magenta animate-pulse">●</span> by InnovateX
-            Tech Team
+          <p className="flex items-center gap-1.5">
+            Designed & Built by
+            <a
+              href="https://www.linkedin.com/in/nikhil-mana/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 font-medium text-purple-300 hover:text-magenta transition-colors"
+            >
+              Nikhil Mana
+              <Linkedin size={12} />
+            </a>
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

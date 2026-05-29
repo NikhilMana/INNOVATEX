@@ -92,7 +92,7 @@ function Hero() {
       <div className="container-x relative z-10 px-6 md:px-12 lg:px-20 py-16">
         <div className="space-y-8 text-center max-w-5xl mx-auto">
           <div data-reveal>
-            <Pill pulsing>Department Fest 2025</Pill>
+            <Pill pulsing>Department Fest 2026</Pill>
           </div>
 
           <h1
@@ -137,8 +137,13 @@ function Hero() {
             className="flex flex-wrap items-center justify-center gap-4 pt-4"
           >
             <Button size="lg" icon={<ArrowRight size={18} />}>
-              <a href={visionX.registerUrl}>Register Now</a>
+              <a href={visionX.registerUrl} target="_blank" rel="noopener noreferrer">Register Now</a>
             </Button>
+            {visionX.feedbackUrl && (
+              <Button size="lg" variant="secondary">
+                <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer">Feedback Form</a>
+              </Button>
+            )}
             <Button
               variant="secondary"
               size="lg"
@@ -174,7 +179,7 @@ function About() {
             data-reveal
             className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
           >
-            Three days. <GradientText>Eight tracks</GradientText>.
+            One day. <GradientText>Three tracks</GradientText>.
             <br />
             One ecosystem of ideas.
           </h2>
@@ -332,7 +337,7 @@ function Schedule() {
             data-reveal
             className="text-xs uppercase tracking-[0.3em] text-purple-400 font-display"
           >
-            · Three-Day Schedule
+            · Event Schedule
           </p>
           <h2
             data-reveal
@@ -627,12 +632,17 @@ function RegisterCTA() {
               Be part of <GradientText>Vision X</GradientText>.
             </h2>
             <p className="text-muted text-base md:text-xl max-w-xl mx-auto">
-              Three days. Eight tracks. Hundreds of builders. Lock in your seat.
+              One day. Three tracks. Hundreds of builders. Lock in your seat.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <Button size="lg" icon={<ArrowRight size={18} />}>
-                <a href={visionX.registerUrl}>Register Now</a>
+                <a href={visionX.registerUrl} target="_blank" rel="noopener noreferrer">Register Now</a>
               </Button>
+              {visionX.feedbackUrl && (
+                <Button size="lg" variant="secondary">
+                  <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer">Feedback Form</a>
+                </Button>
+              )}
               <Link
                 href="/events"
                 className="inline-flex items-center gap-2 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors"

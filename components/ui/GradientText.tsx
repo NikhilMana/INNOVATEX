@@ -21,7 +21,8 @@ export function GradientText({
         ? "gradient-text-soft"
         : "gradient-text";
 
+  const Comp = Component as any;
   return (
-    <Component className={cn(variantClass, className)}>{children}</Component>
+    <Comp className={cn(variantClass, className)}>{children}</Comp>
   );
 }

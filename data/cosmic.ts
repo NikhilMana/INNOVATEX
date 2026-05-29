@@ -9,6 +9,7 @@ export interface CosmicEdition {
   status: "released" | "upcoming";
   gradient: string;
   articleCount?: number;
+  pageCount?: number;
 }
 
 export const cosmicEditions: CosmicEdition[] = [
@@ -24,6 +25,7 @@ export const cosmicEditions: CosmicEdition[] = [
     status: "released",
     gradient: "from-indigo-600 to-purple-700",
     articleCount: 12,
+    pageCount: 40,
   },
   {
     slug: "cosmic-2",
@@ -37,6 +39,7 @@ export const cosmicEditions: CosmicEdition[] = [
     status: "released",
     gradient: "from-blue-600 to-cyan-700",
     articleCount: 16,
+    pageCount: 44,
   },
   {
     slug: "cosmic-3",
@@ -50,6 +53,7 @@ export const cosmicEditions: CosmicEdition[] = [
     status: "released",
     gradient: "from-violet-600 to-fuchsia-700",
     articleCount: 18,
+    pageCount: 43,
   },
   {
     slug: "cosmic-4",

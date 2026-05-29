@@ -98,7 +98,7 @@ function FlagshipFeature() {
                 <GradientText variant="animated">Vision X</GradientText>
               </h2>
               <p className="text-purple-300 text-base md:text-lg font-medium">
-                Department Fest 2025 · December
+                Department Fest 2026 · June
               </p>
               <p className="text-muted text-base leading-relaxed">
                 {visionX.description}
@@ -120,7 +120,7 @@ function FlagshipFeature() {
                     VX
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mt-4">
-                    2025
+                    2026
                   </p>
                 </div>
               </div>

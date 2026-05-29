@@ -7,3 +7,7 @@ export { useCountUp } from "./useCountUp";
 export { useParallax } from "./useParallax";
 export { useFloatingAnimation } from "./useFloatingAnimation";
 export { useSplitText } from "./useSplitText";
+export { useRobotHover } from "./useRobotHover";
+export { useRobotHeroScroll } from "./useRobotHeroScroll";
+export { useRobotScrollNarrative } from "./useRobotScrollNarrative";
+export { useMediaQuery } from "./useMediaQuery";

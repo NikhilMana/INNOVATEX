@@ -61,268 +61,163 @@ export interface VisionXContent {
   sponsorTiers: SponsorTier[];
   faqs: FAQ[];
   registerUrl: string;
+  feedbackUrl?: string;
   brochureUrl: string;
 }
 
 export const visionX: VisionXContent = {
-  /* TODO: replace tagline with the actual brochure tagline */
-  tagline: "Where Tomorrow Begins — Department Fest 2025",
+  /* Tagline from brochure */
+  tagline: "CROSS THE HORIZON CREATE THE FUTURE",
 
-  /* TODO: replace with actual fest start date in ISO format (used for countdown) */
-  date: "2025-12-15T09:00:00+05:30",
-  dateLong: "December 15–17, 2025",
-  venue: "MIT Mysore — CSE AI & ML Campus",
+  /* Fest date */
+  date: "2026-06-04T09:00:00+05:30",
+  dateLong: "June 4, 2026",
+  venue: "Maharaja Institute of Technology, Mysore",
 
-  /* TODO: paste overview paragraph from brochure */
+  /* Overview from brochure */
   overview:
-    "Vision X is the flagship department fest of CSE AI & ML at MIT Mysore — a three-day celebration of ideas, builds, and the people pushing the field forward. Hackathons, workshops, expert talks, a tech expo, and cultural showcases come together under one roof. Designed for builders, researchers, and curious minds across disciplines.",
+    "VisionX is an inter-college technical fest organized by the Department of Computer Science and Engineering – Artificial Intelligence & Machine Learning, in association with the Student Club – Innovatex, held at Maharaja Institute of Technology, Mysore, on 4th of June 2026. It is a celebration of technology, creativity, and innovation, bringing together some of the brightest minds to compete, collaborate, and create. The fest features flagship events — Robogenesis, BrandVerse — each designed to test different dimensions of technical expertise, problem-solving, and teamwork. VisionX aims to inspire students to push boundaries, think beyond the ordinary, and showcase their talents in a dynamic and engaging environment that blends fun with learning.",
 
   /* TODO: confirm KPIs from brochure */
   kpis: [
-    { value: "1,500+", label: "Expected Footfall" },
-    { value: "8", label: "Tracks" },
-    { value: "3", label: "Days" },
-    { value: "₹2L+", label: "Prize Pool" },
+    { value: "1", label: "Day" },
+    { value: "3+", label: "Flagship Events" },
+    { value: "500+", label: "Expected Footfall" },
+    { value: "₹50k+", label: "Prize Pool" },
   ],
 
-  /* TODO: replace tracks list with full brochure event roster */
+  /* Tracks listed in brochure */
   tracks: [
     {
-      id: "hack-x",
-      title: "Hack-X 36",
-      description:
-        "36-hour flagship hackathon. Open theme, real problems, working demos.",
+      id: "robogenesis",
+      title: "Robogenesis",
+      description: "AI Robotics Ideathon & Protothon",
       format: "hackathon",
-      icon: "code",
+      icon: "cpu",
     },
     {
-      id: "frontier-talks",
-      title: "Frontier Talks",
-      description:
-        "Keynotes from industry leaders and researchers on the edge of AI.",
+      id: "brandverse",
+      title: "BrandVerse",
+      description: "AI Conclave. Dive into the world of AI brands and strategy.",
       format: "talk",
       icon: "mic",
     },
     {
-      id: "build-workshops",
-      title: "Build Workshops",
-      description:
-        "Hands-on sessions covering RAG systems, fine-tuning, agents, and more.",
-      format: "workshop",
-      icon: "tool",
-    },
-    {
-      id: "tech-expo",
-      title: "Tech Expo",
-      description:
-        "Department project showcase + sponsor booths + recruitment fair.",
-      format: "expo",
+      id: "relay-brand",
+      title: "Relay",
+      description: "Build a Brand in a relay format challenge.",
+      format: "competition",
       icon: "layers",
-    },
-    {
-      id: "data-cup",
-      title: "Data Cup",
-      description:
-        "Inter-college data science competition with a curated dataset.",
-      format: "competition",
-      icon: "trophy",
-    },
-    {
-      id: "ai-quiz",
-      title: "AI Quiz Bowl",
-      description: "Team-based quiz on AI history, papers, and trivia.",
-      format: "competition",
-      icon: "brain",
-    },
-    {
-      id: "design-sprint",
-      title: "Design Sprint",
-      description:
-        "48-hour UX challenge — design an AI product end-to-end.",
-      format: "competition",
-      icon: "palette",
-    },
-    {
-      id: "cultural-night",
-      title: "Cultural Night",
-      description: "Closing-day celebration — music, performances, awards.",
-      format: "cultural",
-      icon: "music",
     },
   ],
 
-  /* TODO: replace with full day-by-day schedule from brochure */
   schedule: [
     {
-      date: "DEC 15",
-      label: "Day 1 · Open",
+      date: "JUN 04",
+      label: "VisionX 2026",
       sessions: [
         {
           time: "09:00",
-          title: "Opening Ceremony",
+          title: "Inauguration Ceremony & Welcome Address",
           venue: "Main Auditorium",
           format: "talk",
         },
         {
-          time: "10:30",
-          title: "Keynote: The State of AI in 2026",
-          speaker: "TBD",
-          venue: "Main Auditorium",
-          format: "talk",
-        },
-        {
-          time: "14:00",
-          title: "Hack-X 36 — Kickoff",
-          venue: "Lab Block A",
-          format: "hackathon",
-        },
-        {
-          time: "16:00",
-          title: "Workshop: Building RAG Systems",
-          speaker: "TBD",
-          venue: "Lab Block B",
-          format: "workshop",
-        },
-      ],
-    },
-    {
-      date: "DEC 16",
-      label: "Day 2 · Build",
-      sessions: [
-        {
-          time: "09:00",
-          title: "Industry Panel: From Lab to Product",
+          time: "10:00",
+          title: "Department Magazine & Applications Launch",
           venue: "Main Auditorium",
           format: "talk",
         },
         {
           time: "11:00",
-          title: "Workshop: Fine-tuning Open Models",
-          venue: "Lab Block B",
-          format: "workshop",
-        },
-        {
-          time: "14:00",
-          title: "Tech Expo Opens",
-          venue: "Expo Hall",
-          format: "expo",
-        },
-        {
-          time: "18:00",
-          title: "Data Cup — Round 1",
-          venue: "Lab Block A",
-          format: "competition",
-        },
-      ],
-    },
-    {
-      date: "DEC 17",
-      label: "Day 3 · Showcase",
-      sessions: [
-        {
-          time: "10:00",
-          title: "Hack-X 36 — Demos",
-          venue: "Main Auditorium",
+          title: "Robogenesis — AI Robotics Ideathon",
+          venue: "Lab Block",
           format: "hackathon",
         },
         {
-          time: "13:00",
-          title: "Design Sprint — Finals",
-          venue: "Studio",
+          time: "11:00",
+          title: "BrandVerse — AI Conclave",
+          venue: "Seminar Hall",
+          format: "talk",
+        },
+        {
+          time: "14:00",
+          title: "Relay — Build a Brand",
+          venue: "Lab Block",
           format: "competition",
         },
         {
           time: "16:00",
-          title: "Awards & Closing",
-          venue: "Main Auditorium",
-          format: "talk",
+          title: "Evaluation & Result Compilation",
+          venue: "Lab Block",
+          format: "competition",
         },
         {
-          time: "19:00",
-          title: "Cultural Night",
-          venue: "Outdoor Stage",
+          time: "17:00",
+          title: "Valedictory Ceremony & Prize Distribution",
+          venue: "Main Auditorium",
+          format: "cultural",
+        },
+        {
+          time: "18:00",
+          title: "Vote of Thanks & Group Photo",
+          venue: "Main Auditorium",
           format: "cultural",
         },
       ],
     },
   ],
 
-  /* TODO: replace with confirmed speakers from brochure */
   speakers: [
     {
-      name: "Speaker One",
-      designation: "Principal Researcher",
-      org: "TBD",
-      talk: "The State of AI in 2026",
-      initials: "S1",
+      name: "Dr. Ranjith K C",
+      designation: "HoD CSE-AI&ML",
+      org: "MIT Mysore",
+      talk: "Welcome Address",
+      initials: "RK",
       gradient: "from-magenta to-purple-500",
-    },
-    {
-      name: "Speaker Two",
-      designation: "Engineering Lead",
-      org: "TBD",
-      talk: "From Lab to Product",
-      initials: "S2",
-      gradient: "from-purple-500 to-indigo-600",
-    },
-    {
-      name: "Speaker Three",
-      designation: "AI Founder",
-      org: "TBD",
-      talk: "Founding an AI Company",
-      initials: "S3",
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      name: "Speaker Four",
-      designation: "Research Scientist",
-      org: "TBD",
-      talk: "Open Models, Open Future",
-      initials: "S4",
-      gradient: "from-emerald-500 to-teal-500",
     },
   ],
 
-  /* TODO: replace sponsor tiers with confirmed sponsors from brochure */
   sponsorTiers: [
     {
       tier: "title",
-      label: "Title Sponsor",
-      sponsors: [{ name: "TBD" }],
+      label: "Title Sponsor (₹50,000)",
+      sponsors: [{ name: "Available" }],
     },
     {
       tier: "gold",
-      label: "Gold Partners",
-      sponsors: [{ name: "TBD" }, { name: "TBD" }, { name: "TBD" }],
+      label: "Platinum Sponsor (₹35,000)",
+      sponsors: [{ name: "Available" }, { name: "Available" }],
     },
     {
       tier: "silver",
-      label: "Silver Partners",
+      label: "Gold Sponsor (₹25,000)",
       sponsors: [
-        { name: "TBD" },
-        { name: "TBD" },
-        { name: "TBD" },
-        { name: "TBD" },
+        { name: "Available" },
+        { name: "Available" },
+        { name: "Available" },
+        { name: "Available" },
       ],
     },
     {
       tier: "community",
-      label: "Community Partners",
+      label: "Silver Sponsor (₹15,000)",
       sponsors: [
-        { name: "TBD" },
-        { name: "TBD" },
-        { name: "TBD" },
-        { name: "TBD" },
-        { name: "TBD" },
+        { name: "Available" },
+        { name: "Available" },
+        { name: "Available" },
+        { name: "Available" },
+        { name: "Available" },
+        { name: "Available" },
       ],
     },
   ],
 
-  /* TODO: replace FAQ with brochure FAQ */
   faqs: [
     {
       q: "Who can attend Vision X?",
-      a: "Students, faculty, and industry guests are welcome. Some events (Hack-X 36, Data Cup) require pre-registration.",
+      a: "Students, faculty, and industry guests are welcome. Some events (Robogenesis, Relay) require pre-registration.",
     },
     {
       q: "Is there a registration fee?",
@@ -338,7 +233,7 @@ export const visionX: VisionXContent = {
     },
     {
       q: "How do I get on-campus?",
-      a: "The MIT Mysore campus is at Belawadi, Srirangapatna Taluk. Shuttle from Mysore city on each fest day — schedule on the registration page.",
+      a: "The MIT Mysore campus is at Belawadi, Srirangapatna Taluk. Shuttle from Mysore city on the fest day — schedule on the registration page.",
     },
     {
       q: "Where do I stay if I'm coming from outside Mysore?",
@@ -346,7 +241,7 @@ export const visionX: VisionXContent = {
     },
   ],
 
-  /* TODO: replace with the live registration URL when confirmed */
-  registerUrl: "#register",
+  registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc5AzoVq5hm6DNC_WGkoAEEffK1KmvNmx-6RRkPDLu4H9u5tA/viewform?usp=header",
+  feedbackUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6TuL9uxv791thUJklHKpcjDONz2PP7ybOQzVwzoOiclQrpQ/viewform?usp=header",
   brochureUrl: "/vision-x-brochure.pdf",
 };

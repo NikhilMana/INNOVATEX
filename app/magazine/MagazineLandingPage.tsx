@@ -148,24 +148,34 @@ function EditionShowcase({
                 featured ? "aspect-[3/4]" : "aspect-[4/3]"
               )}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
-              <BookOpen
-                size={featured ? 40 : 24}
-                className="absolute top-4 left-4 text-white/40"
-              />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-1">
-                  Edition {edition.edition}
-                </p>
-                <p
-                  className={cn(
-                    "font-display font-black leading-none",
-                    featured ? "text-5xl md:text-7xl" : "text-3xl"
-                  )}
-                >
-                  {edition.title}
-                </p>
-              </div>
+              {!featured && edition.pageCount ? (
+                <img
+                  src={`/magazines/${edition.slug}/page_001.jpeg`}
+                  alt={`${edition.title} Cover`}
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                  <BookOpen
+                    size={featured ? 40 : 24}
+                    className="absolute top-4 left-4 text-white/40"
+                  />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-1">
+                      Edition {edition.edition}
+                    </p>
+                    <p
+                      className={cn(
+                        "font-display font-black leading-none",
+                        featured ? "text-5xl md:text-7xl" : "text-3xl"
+                      )}
+                    >
+                      {edition.title}
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="flex-1 space-y-3">

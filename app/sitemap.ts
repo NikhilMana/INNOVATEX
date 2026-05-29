@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/events/vision-x",
     "/events/arivu",
     "/events/arghya",
-    "/events/aroohan",
+    "/events/aarohan",
     "/events/innovatex",
     "/magazine",
     "/magazine/cosmic-1",

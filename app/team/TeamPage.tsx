@@ -79,13 +79,13 @@ function CoreGrid() {
             data-reveal
             className="text-xs uppercase tracking-[0.3em] text-purple-400 font-display"
           >
-            · Core Team
+            · The Roots of InnovateX
           </p>
           <h2
             data-reveal
             className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
           >
-            Who runs <GradientText>InnovateX</GradientText>.
+            ExeCom <GradientText>Team</GradientText>.
           </h2>
         </div>
 
@@ -107,10 +107,14 @@ function MemberCard({ member }: { member: TeamMember }) {
           <div
             className={`relative h-40 md:h-52 rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} flex items-center justify-center`}
           >
+            {member.image ? (
+              <img src={member.image} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-center" />
+            ) : (
+              <span className="relative font-display text-5xl md:text-6xl font-extrabold text-white/90">
+                {member.initials}
+              </span>
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <span className="relative font-display text-5xl md:text-6xl font-extrabold text-white/90">
-              {member.initials}
-            </span>
 
             <div className="absolute inset-0 flex items-end justify-center gap-2 pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-bg/70 backdrop-blur-sm">
               <a href="#" className="p-2 rounded-full bg-white/10 hover:bg-purple-500 transition-colors">

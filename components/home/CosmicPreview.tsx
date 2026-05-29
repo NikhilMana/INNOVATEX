@@ -105,19 +105,29 @@ function EditionCard({ edition }: { edition: CosmicEdition }) {
                 className={`relative h-44 rounded-xl overflow-hidden bg-gradient-to-br ${edition.gradient} flex items-center justify-center`}
                 style={{ transform: "translateZ(20px)" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <BookOpen
-                  size={32}
-                  className="absolute top-4 left-4 text-white/40"
-                />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-1">
-                    Edition {edition.edition}
-                  </p>
-                  <p className="font-display text-3xl font-extrabold leading-tight">
-                    {edition.title}
-                  </p>
-                </div>
+                {!upcoming && edition.pageCount ? (
+                  <img
+                    src={`/magazines/${edition.slug}/page_001.jpeg`}
+                    alt={`${edition.title} Cover`}
+                    className="absolute inset-0 w-full h-full object-cover object-top"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <BookOpen
+                      size={32}
+                      className="absolute top-4 left-4 text-white/40"
+                    />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-1">
+                        Edition {edition.edition}
+                      </p>
+                      <p className="font-display text-3xl font-extrabold leading-tight">
+                        {edition.title}
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
 
               <div className="flex-1 space-y-2">

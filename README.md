@@ -77,16 +77,21 @@ Visual design QA: `/design-system` (remove before deploying to production).
 
 ## Animations
 
-All animation logic lives in `hooks/`:
+Homepage motion is built with **GSAP + ScrollTrigger + Lenis** (Active Theory–style smooth scroll, scrubbed parallax, and a scroll-driven robot narrative).
 
-- `useRevealAnimation` — scroll-triggered fade-up reveals
-- `useHeroAnimation` — full hero entrance timeline
-- `useMagneticButton` — cursor-magnetic effect on buttons
-- `useCountUp` — animated number counters
-- `useParallax` — scroll-linked parallax transforms
-- `useFloatingAnimation` — continuous float loop
-- `useSplitText` — wraps words/chars for stagger animations
-- `useReducedMotion` — honors prefers-reduced-motion
+| Piece | Role |
+|---|---|
+| `public/robot/robot_asset.png` | Robot centerpiece asset (`lib/robot.ts` → `ROBOT_ASSET`) |
+| `RobotImage` | Image + aura + hover tilt |
+| `RobotScene` | Fixed desktop robot; moves through sections on scroll |
+| `IntroSplash` | Preloader featuring the robot |
+| `useRobotHeroScroll` | Hero parallax (robot vs background layers) |
+| `useRobotScrollNarrative` | Full-page robot journey (lg+ only) |
+| `useRevealAnimation` | Section fade-up reveals |
+| `useHeroAnimation` | Hero entrance after splash |
+| `useReducedMotion` | Disables motion when requested |
+
+**Customize:** Edit scrub timings in `hooks/useRobotHeroScroll.ts` and `hooks/useRobotScrollNarrative.ts`. Toggle dev markers via `ScrollTrigger` config in `lib/gsap.ts`. Replace the asset path in `lib/robot.ts`.
 
 ## Notes
 

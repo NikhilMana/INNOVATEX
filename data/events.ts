@@ -36,33 +36,22 @@ export const events: EventEntry[] = [
     highlights: ["Industry talks", "Speaker series", "Live Q&A"],
   },
   {
-    slug: "aroohan",
-    title: "Aroohan",
-    tagline: "Skills that take flight",
+    slug: "aarohan",
+    title: "Aarohan",
+    tagline: "Building the foundations",
     description:
-      "Hands-on workshops covering practical tooling, frameworks, and end-to-end project builds across the AI/ML stack.",
-    gradient: "from-orange-500 to-rose-700",
-    href: "/events/aroohan",
+      "Skill-building workshops focusing on foundational knowledge, hands-on programming, and core technologies.",
+    logo: "/images/logos/Aarohanlogo.jpg",
+    gradient: "from-rose-500 to-pink-700",
+    href: "/events/aarohan",
     status: "active",
-    highlights: ["Hands-on workshops", "Project sprints", "Mentor sessions"],
-  },
-  {
-    slug: "innovatex",
-    title: "InnovateX",
-    tagline: "Build. Ship. Repeat.",
-    description:
-      "The flagship hackathon-and-build series. 36-hour sprints, ambitious problem statements, real shipping.",
-    logo: "/images/logos/innovateX.jpg",
-    gradient: "from-purple-500 to-fuchsia-700",
-    href: "/events/innovatex",
-    status: "active",
-    highlights: ["Hackathons", "Build sprints", "Demo days"],
+    highlights: ["Workshops", "Hands-on coding", "Skill-building"],
   },
 ];
 
 export const stats = [
-  { value: 500, suffix: "+", label: "Active Members" },
+  { value: 137, suffix: "+", label: "Active Members" },
   { value: 30, suffix: "+", label: "Events Hosted" },
-  { value: 4, suffix: "", label: "Flagship Programs" },
+  { value: 2, suffix: "", label: "Flagship Programs" },
   { value: 4, suffix: "", label: "COSMIC Editions" },
 ];

@@ -1,0 +1,2311 @@
+[browser] Image with src "/images/logos/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/images/logos/arivulogo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/images/logos/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead. 
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndMaybeFocusHandler cacheNode={{rsc:Promise, ...}}>
+        <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:Promise, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="/" loading={null}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:Promise, ...}} ...>
+                        <SegmentViewNode type="page" pagePath="page.tsx">
+                          <SegmentTrieNode>
+                          <HomePage>
+                            <SmoothScrollProvider>
+                              <IntroSplash>
+                              <ScrollProgress>
+                              <Navbar>
+                              <RobotScene>
++                               <div
++                                 ref={{current:null}}
++                                 className="pointer-events-none fixed inset-0 z-[15] hidden lg:block"
++                                 aria-hidden={true}
++                               >
+-                               <main id="main" className="relative">
+                              ...
+                        ...
+                      ...
+          ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at RobotScene (components/robot/RobotScene.tsx:21:5)
+    at HomePage (app\page.tsx:21:7)
+  19 |
+  20 |   return (
+> 21 |     <div
+     |     ^
+  22 |       ref={sceneRef}
+  23 |       className="pointer-events-none fixed inset-0 z-[15] hidden lg:block"
+  24 |       aria-hidden
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/layout/SmoothScrollProvider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ The requested resource isn't a valid image for /robot/robot_asset.png received null
+⨯ The requested resource isn't a valid image for /robot/robot_asset.png received null
+⨯ The requested resource isn't a valid image for /robot/robot_asset.png received null
+⨯ The requested resource isn't a valid image for /robot/robot_asset.png received null
+⨯ The requested resource isn't a valid image for /robot/robot_asset.png received null
+⨯ The requested resource isn't a valid image for /robot/robot_asset.png received null
+⨯ ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m4 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m8 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m9 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:6:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:6:1)
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:6:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:6:1)
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:6:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:6:1)
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+[browser] ./components/robot/RobotImage.tsx:6:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  4 | import { forwardRef, useCallback, useState } from "react";
+  5 | import { cn } from "@/lib/utils";
+> 6 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { RobotAura } from "@/components/robot/RobotAura";
+  8 | import { useRobotHover } from "@/hooks/useRobotHover";
+  9 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component] 
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  3 | import { forwardRef, useCallback, useState } from "react";
+  4 | import { cn } from "@/lib/utils";
+> 5 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { RobotAura } from "@/components/robot/RobotAura";
+  7 | import { useRobotHover } from "@/hooks/useRobotHover";
+  8 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:5:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:5:1)
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  3 | import { forwardRef, useCallback, useState } from "react";
+  4 | import { cn } from "@/lib/utils";
+> 5 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { RobotAura } from "@/components/robot/RobotAura";
+  7 | import { useRobotHover } from "@/hooks/useRobotHover";
+  8 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:5:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:5:1)
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  3 | import { forwardRef, useCallback, useState } from "react";
+  4 | import { cn } from "@/lib/utils";
+> 5 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { RobotAura } from "@/components/robot/RobotAura";
+  7 | import { useRobotHover } from "@/hooks/useRobotHover";
+  8 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:5:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:5:1)
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  3 | import { forwardRef, useCallback, useState } from "react";
+  4 | import { cn } from "@/lib/utils";
+> 5 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { RobotAura } from "@/components/robot/RobotAura";
+  7 | import { useRobotHover } from "@/hooks/useRobotHover";
+  8 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:5:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:5:1)
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+⨯ ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  [90m3 |[0m [36mimport[0m { forwardRef, useCallback, useState } [36mfrom[0m [32m"react"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mROBOT_ASSET[0m, [33mROBOT_ASSET_FALLBACK[0m } [36mfrom[0m [32m"@/lib/robot"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mRobotAura[0m } [36mfrom[0m [32m"@/components/robot/RobotAura"[0m;
+  [90m7 |[0m [36mimport[0m { useRobotHover } [36mfrom[0m [32m"@/hooks/useRobotHover"[0m;
+  [90m8 |[0m
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-ssr] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  3 | import { forwardRef, useCallback, useState } from "react";
+  4 | import { cn } from "@/lib/utils";
+> 5 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { RobotAura } from "@/components/robot/RobotAura";
+  7 | import { useRobotHover } from "@/hooks/useRobotHover";
+  8 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:5:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:5:1)
+[browser] Uncaught Error: ./components/robot/RobotImage.tsx:5:1
+Export ROBOT_ASSET_FALLBACK doesn't exist in target module
+  3 | import { forwardRef, useCallback, useState } from "react";
+  4 | import { cn } from "@/lib/utils";
+> 5 | import { ROBOT_ASSET, ROBOT_ASSET_FALLBACK } from "@/lib/robot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import { RobotAura } from "@/components/robot/RobotAura";
+  7 | import { useRobotHover } from "@/hooks/useRobotHover";
+  8 |
+
+The export ROBOT_ASSET_FALLBACK was not found in module [project]/lib/robot.ts [app-client] (ecmascript).
+Did you mean to import ROBOT_ASSET?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/robot/RobotImage.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Client Component Browser]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/robot/RobotImage.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Client Component SSR]
+    ./components/home/HeroSection.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./components/robot/RobotImage.tsx:5:1)
+    at <unknown> (Error: (./components/robot/RobotImage.tsx:5:1)
+[browser] Uncaught Error: Target ref is defined but not hydrated. For more information and steps for solving, visit https://motion.dev/troubleshooting/use-scroll-ref
+    at Set.forEach (<anonymous>)
+[browser] React has detected a change in the order of Hooks called by AetherCanvas. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useRef                     useRef
+2. useRef                     useRef
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useRef                     useRef
+7. useRef                     useRef
+8. useRef                     useRef
+9. useCallback                useCallback
+10. useLayoutEffect           useLayoutEffect
+11. useEffect                 useEffect
+12. useContext                useContext
+13. useRef                    useRef
+14. useContext                useContext
+15. useInsertionEffect        useInsertionEffect
+16. useEffect                 useEffect
+17. useEffect                 useEffect
+18. undefined                 useRef
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at AetherCanvas (components/AetherCanvas.tsx:131:32)
+  129 |   // Text Animations
+  130 |   // Beat A: 0 - 0.20
+> 131 |   const opacityA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [0, 1, 1, 0]);
+      |                                ^
+  132 |   const yA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [20, 0, 0, -20]);
+  133 |
+  134 |   // Beat B: 0.25 - 0.45 (components/AetherCanvas.tsx:131:32)
+[browser] Uncaught Error: Rendered more hooks than during the previous render.
+    at AetherCanvas (components/AetherCanvas.tsx:131:32)
+    at HomePage (app\page.tsx:6:7)
+  129 |   // Text Animations
+  130 |   // Beat A: 0 - 0.20
+> 131 |   const opacityA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [0, 1, 1, 0]);
+      |                                ^
+  132 |   const yA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [20, 0, 0, -20]);
+  133 |
+  134 |   // Beat B: 0.25 - 0.45
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Uncaught Error: Target ref is defined but not hydrated. For more information and steps for solving, visit https://motion.dev/troubleshooting/use-scroll-ref
+    at Set.forEach (<anonymous>)
+[browser] React has detected a change in the order of Hooks called by AetherCanvas. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useRef                     useRef
+2. useRef                     useRef
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useRef                     useRef
+7. useRef                     useRef
+8. useRef                     useRef
+9. useCallback                useCallback
+10. useLayoutEffect           useLayoutEffect
+11. useEffect                 useEffect
+12. useContext                useContext
+13. useRef                    useRef
+14. useContext                useContext
+15. useInsertionEffect        useInsertionEffect
+16. useEffect                 useEffect
+17. useEffect                 useEffect
+18. undefined                 useRef
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at AetherCanvas (components/AetherCanvas.tsx:131:32)
+  129 |   // Text Animations
+  130 |   // Beat A: 0 - 0.20
+> 131 |   const opacityA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [0, 1, 1, 0]);
+      |                                ^
+  132 |   const yA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [20, 0, 0, -20]);
+  133 |
+  134 |   // Beat B: 0.25 - 0.45 (components/AetherCanvas.tsx:131:32)
+[browser] Uncaught Error: Rendered more hooks than during the previous render.
+    at AetherCanvas (components/AetherCanvas.tsx:131:32)
+    at HomePage (app\page.tsx:6:7)
+  129 |   // Text Animations
+  130 |   // Beat A: 0 - 0.20
+> 131 |   const opacityA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [0, 1, 1, 0]);
+      |                                ^
+  132 |   const yA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [20, 0, 0, -20]);
+  133 |
+  134 |   // Beat B: 0.25 - 0.45
+[browser] Uncaught Error: Target ref is defined but not hydrated. For more information and steps for solving, visit https://motion.dev/troubleshooting/use-scroll-ref
+    at Set.forEach (<anonymous>)
+[browser] React has detected a change in the order of Hooks called by AetherCanvas. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+1. useRef                     useRef
+2. useRef                     useRef
+3. useState                   useState
+4. useState                   useState
+5. useState                   useState
+6. useRef                     useRef
+7. useRef                     useRef
+8. useRef                     useRef
+9. useCallback                useCallback
+10. useLayoutEffect           useLayoutEffect
+11. useEffect                 useEffect
+12. useContext                useContext
+13. useRef                    useRef
+14. useContext                useContext
+15. useInsertionEffect        useInsertionEffect
+16. useEffect                 useEffect
+17. useEffect                 useEffect
+18. undefined                 useRef
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+    at AetherCanvas (components/AetherCanvas.tsx:131:32)
+  129 |   // Text Animations
+  130 |   // Beat A: 0 - 0.20
+> 131 |   const opacityA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [0, 1, 1, 0]);
+      |                                ^
+  132 |   const yA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [20, 0, 0, -20]);
+  133 |
+  134 |   // Beat B: 0.25 - 0.45 (components/AetherCanvas.tsx:131:32)
+[browser] Uncaught Error: Rendered more hooks than during the previous render.
+    at AetherCanvas (components/AetherCanvas.tsx:131:32)
+    at HomePage (app\page.tsx:6:7)
+  129 |   // Text Animations
+  130 |   // Beat A: 0 - 0.20
+> 131 |   const opacityA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [0, 1, 1, 0]);
+      |                                ^
+  132 |   const yA = useTransform(smoothProgress, [0, 0.1, 0.1, 0.2], [20, 0, 0, -20]);
+  133 |
+  134 |   // Beat B: 0.25 - 0.45
+⨯ ./components/AetherCanvas.tsx:219:7
+Expression expected
+  [90m217 |[0m         </div>
+  [90m218 |[0m       </div>
+[31m[1m>[0m [90m219 |[0m     </>
+  [90m    |[0m       [31m[1m^[0m
+  [90m220 |[0m   );
+  [90m221 |[0m }
+  [90m222 |[0m
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/AetherCanvas.tsx:219:7
+Expression expected
+  [90m217 |[0m         </div>
+  [90m218 |[0m       </div>
+[31m[1m>[0m [90m219 |[0m     </>
+  [90m    |[0m       [31m[1m^[0m
+  [90m220 |[0m   );
+  [90m221 |[0m }
+  [90m222 |[0m
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx
+
+
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] Uncaught Error: ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx
+
+
+    at <unknown> (Error: ./components/AetherCanvas.tsx:219:7)
+    at <unknown> (Error: (./components/AetherCanvas.tsx:219:7)
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] Uncaught Error: ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx
+
+
+    at <unknown> (Error: ./components/AetherCanvas.tsx:219:7)
+    at <unknown> (Error: (./components/AetherCanvas.tsx:219:7)
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+⨯ ./components/AetherCanvas.tsx:219:7
+Expression expected
+  [90m217 |[0m         </div>
+  [90m218 |[0m       </div>
+[31m[1m>[0m [90m219 |[0m     </>
+  [90m    |[0m       [31m[1m^[0m
+  [90m220 |[0m   );
+  [90m221 |[0m }
+  [90m222 |[0m
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx
+
+
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] Uncaught Error: ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx
+
+
+    at <unknown> (Error: ./components/AetherCanvas.tsx:219:7)
+    at <unknown> (Error: (./components/AetherCanvas.tsx:219:7)
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+[browser] ./components/AetherCanvas.tsx:219:7
+Expression expected
+  217 |         </div>
+  218 |       </div>
+> 219 |     </>
+      |       ^
+  220 |   );
+  221 | }
+  222 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/AetherCanvas.tsx
+    ./app/page.tsx 
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+⨯ ./components/layout/Navbar.tsx:162:9
+Expression expected
+  [90m160 |[0m             : [32m"opacity-0 scale-95 pointer-events-none"[0m
+  [90m161 |[0m         )}
+[31m[1m>[0m [90m162 |[0m         <div className=[32m"bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl"[0m>
+  [90m    |[0m         [31m[1m^[0m
+  [90m163 |[0m           {item.children?.map((child) => (
+  [90m164 |[0m             <[33mLink[0m
+  [90m165 |[0m               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+[browser] Uncaught Error: ./components/layout/Navbar.tsx:162:9
+Expression expected
+  160 |             : "opacity-0 scale-95 pointer-events-none"
+  161 |         )}
+> 162 |         <div className="bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl">
+      |         ^
+  163 |           {item.children?.map((child) => (
+  164 |             <Link
+  165 |               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+    at <unknown> (Error: ./components/layout/Navbar.tsx:162:9)
+    at <unknown> (Error: (./components/layout/Navbar.tsx:162:9)
+[browser] Uncaught Error: ./components/layout/Navbar.tsx:162:9
+Expression expected
+  160 |             : "opacity-0 scale-95 pointer-events-none"
+  161 |         )}
+> 162 |         <div className="bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl">
+      |         ^
+  163 |           {item.children?.map((child) => (
+  164 |             <Link
+  165 |               key={child.href}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/layout/Navbar.tsx
+    ./app/page.tsx
+
+
+    at <unknown> (Error: ./components/layout/Navbar.tsx:162:9)
+    at <unknown> (Error: (./components/layout/Navbar.tsx:162:9)
+[browser] Image with src "/images/logos/arivulogo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/images/logos/argya.jpeg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

@@ -16,6 +16,7 @@ import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 import { type EditionDetail } from "@/data/magazine";
+import { MagazineFlipbook } from "@/components/ui/MagazineFlipbook";
 
 export function EditionTemplate({ edition }: { edition: EditionDetail }) {
   const upcoming = edition.status === "upcoming";
@@ -26,6 +27,7 @@ export function EditionTemplate({ edition }: { edition: EditionDetail }) {
       <Navbar />
       <main id="main">
         <Hero edition={edition} />
+        {!upcoming && edition.pageCount && <FlipbookSection edition={edition} />}
         {!upcoming && <Articles edition={edition} />}
         <EditorialBoard edition={edition} />
         {upcoming ? <NotifyMe edition={edition} /> : <DownloadCTA edition={edition} />}
@@ -101,7 +103,7 @@ function Hero({ edition }: { edition: EditionDetail }) {
                 <Button size="lg" icon={<Download size={16} />} iconPosition="left">
                   Download PDF
                 </Button>
-                <Button variant="secondary" size="lg" icon={<BookOpen size={16} />} iconPosition="left">
+                <Button variant="secondary" size="lg" icon={<BookOpen size={16} />} iconPosition="left" onClick={() => document.getElementById('read-online')?.scrollIntoView({ behavior: 'smooth' })}>
                   Read Online
                 </Button>
               </div>
@@ -116,28 +118,71 @@ function Hero({ edition }: { edition: EditionDetail }) {
               <div
                 className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${edition.gradient} shadow-glow-lg overflow-hidden`}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
-                <div className="absolute inset-0 flex flex-col justify-between p-8">
-                  <div>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-2">
-                      InnovateX · COSMIC
-                    </p>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-white/50">
-                      Edition {edition.edition} · {edition.releaseDate}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-display text-5xl md:text-6xl font-black leading-[0.85] mb-4">
-                      {edition.title}
-                    </p>
-                    <p className="font-display text-base text-white/80">
-                      {edition.theme}
-                    </p>
-                  </div>
-                </div>
+                {!upcoming && edition.pageCount ? (
+                  <img 
+                    src={`/magazines/${edition.slug}/page_001.jpeg`}
+                    alt={`${edition.title} Cover`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                    <div className="absolute inset-0 flex flex-col justify-between p-8">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-2">
+                          InnovateX · COSMIC
+                        </p>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-white/50">
+                          Edition {edition.edition} · {edition.releaseDate}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="font-display text-5xl md:text-6xl font-black leading-[0.85] mb-4">
+                          {edition.title}
+                        </p>
+                        <p className="font-display text-base text-white/80">
+                          {edition.theme}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FlipbookSection({ edition }: { edition: EditionDetail }) {
+  const rootRef = useRef<HTMLElement>(null);
+  useRevealAnimation(rootRef);
+
+  if (!edition.pageCount) return null;
+
+  const flipbookPages = Array.from({ length: edition.pageCount }).map(
+    (_, i) => `/magazines/${edition.slug}/page_${String(i + 1).padStart(3, "0")}.jpeg`
+  );
+
+  return (
+    <section ref={rootRef} className="relative section-padding overflow-hidden bg-black/40" id="read-online">
+      <div className="container-x relative z-10">
+        <div className="text-center mb-10">
+          <h2
+            data-reveal
+            className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
+          >
+            Interactive <GradientText>Flipbook</GradientText>
+          </h2>
+          <p data-reveal className="text-muted mt-2 max-w-lg mx-auto">
+            Experience {edition.title} in full 3D interactive glory. Click or drag to turn pages.
+          </p>
+        </div>
+        
+        <div data-reveal className="w-full flex justify-center">
+          <MagazineFlipbook pages={flipbookPages} title={edition.title} />
         </div>
       </div>
     </section>
@@ -279,7 +324,7 @@ function DownloadCTA({ edition }: { edition: EditionDetail }) {
               <Button size="lg" icon={<Download size={18} />} iconPosition="left">
                 Download PDF
               </Button>
-              <Button variant="secondary" size="lg" icon={<BookOpen size={18} />} iconPosition="left">
+              <Button variant="secondary" size="lg" icon={<BookOpen size={18} />} iconPosition="left" onClick={() => document.getElementById('read-online')?.scrollIntoView({ behavior: 'smooth' })}>
                 Read Online
               </Button>
             </div>

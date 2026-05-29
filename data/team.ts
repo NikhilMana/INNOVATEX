@@ -4,6 +4,7 @@ export interface TeamMember {
   bio?: string;
   initials: string;
   gradient: string;
+  image?: string;
   socials?: {
     linkedin?: string;
     github?: string;
@@ -12,40 +13,17 @@ export interface TeamMember {
 }
 
 export const coreTeam: TeamMember[] = [
-  {
-    name: "Faculty Coordinator",
-    role: "Head — InnovateX",
-    initials: "FC",
-    gradient: "from-magenta to-purple-500",
-  },
-  {
-    name: "Student Lead",
-    role: "President",
-    initials: "SL",
-    gradient: "from-purple-500 to-indigo-600",
-  },
-  {
-    name: "Tech Lead",
-    role: "Engineering",
-    initials: "TL",
-    gradient: "from-blue-500 to-cyan-500",
-  },
-  {
-    name: "Design Lead",
-    role: "Brand & Visual",
-    initials: "DL",
-    gradient: "from-pink-500 to-rose-500",
-  },
-  {
-    name: "Events Lead",
-    role: "Operations",
-    initials: "EL",
-    gradient: "from-orange-500 to-amber-500",
-  },
-  {
-    name: "Editorial Lead",
-    role: "COSMIC",
-    initials: "EM",
-    gradient: "from-emerald-500 to-teal-500",
-  },
+  { name: "Suhas M", role: "General Secretary", initials: "SM", gradient: "from-purple-500 to-indigo-600", image: "/images/placeholders/avatar.png" },
+  { name: "Tharun M P", role: "Deputy General Secretary", initials: "TM", gradient: "from-magenta to-purple-500", image: "/images/placeholders/avatar.png" },
+  { name: "Harshitha K S", role: "Deputy General Secretary", initials: "HK", gradient: "from-pink-500 to-rose-500", image: "/images/placeholders/avatar.png" },
+  { name: "Beulah D", role: "Treasurer", initials: "BD", gradient: "from-emerald-500 to-teal-500", image: "/images/placeholders/avatar.png" },
+  { name: "M J Purushotham Gowda", role: "Event Coordinator", initials: "MP", gradient: "from-orange-500 to-amber-500", image: "/images/placeholders/avatar.png" },
+  { name: "Thabish Gafar M", role: "Event Coordinator", initials: "TG", gradient: "from-blue-500 to-cyan-500", image: "/images/placeholders/avatar.png" },
+  { name: "Monisha M J", role: "Event Coordinator", initials: "MM", gradient: "from-purple-500 to-fuchsia-500", image: "/images/placeholders/avatar.png" },
+  { name: "K C Roopa Shetty", role: "Executive Coordinator", initials: "KR", gradient: "from-teal-400 to-emerald-600", image: "/images/placeholders/avatar.png" },
+  { name: "Dicken Kumar K", role: "Executive Coordinator", initials: "DK", gradient: "from-rose-400 to-red-600", image: "/images/placeholders/avatar.png" },
+  { name: "Kishan S Shetty", role: "Technical Coordinator", initials: "KS", gradient: "from-cyan-400 to-blue-600", image: "/images/placeholders/avatar.png" },
+  { name: "Samarth M N", role: "Technical Coordinator", initials: "SM", gradient: "from-indigo-400 to-purple-600", image: "/images/placeholders/avatar.png" },
+  { name: "Amith K", role: "Non-Technical Coordinator", initials: "AK", gradient: "from-amber-400 to-orange-600", image: "/images/placeholders/avatar.png" },
+  { name: "Anvitha A", role: "Non-Technical Coordinator", initials: "AA", gradient: "from-fuchsia-400 to-pink-600", image: "/images/placeholders/avatar.png" },
 ];

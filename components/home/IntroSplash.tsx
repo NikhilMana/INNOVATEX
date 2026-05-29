@@ -1,7 +1,6 @@
 "use client";
 
 import { useLayoutEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
@@ -11,8 +10,7 @@ export function IntroSplash() {
   const reduced = useReducedMotion();
   const [hidden, setHidden] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
+  const logoWrapRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     if (typeof window === "undefined") return;
@@ -37,51 +35,37 @@ export function IntroSplash() {
         },
       });
 
-      gsap.set(logoRef.current, { scale: 0.6, opacity: 0 });
-      gsap.set(glowRef.current, { scale: 0.3, opacity: 0 });
+      gsap.set(logoWrapRef.current, { scale: 0.95, opacity: 0 });
 
-      tl.to(glowRef.current, {
-        scale: 1.4,
-        opacity: 1,
-        duration: 1.2,
-        ease: "power2.out",
-      })
-        .to(
-          logoRef.current,
+      tl.to(
+          logoWrapRef.current,
           {
             scale: 1,
             opacity: 1,
-            duration: 1,
-            ease: "expo.out",
-          },
-          "-=1"
-        )
-        .to(
-          logoRef.current,
-          {
-            scale: 1.05,
-            duration: 0.4,
-            ease: "power2.inOut",
-            yoyo: true,
-            repeat: 1,
-          },
-          "+=0.1"
+            duration: 1.5,
+            ease: "power2.out",
+          }
         )
         .to(
           rootRef.current,
           {
             opacity: 0,
-            y: -20,
-            duration: 0.8,
-            ease: "expo.in",
+            duration: 1,
+            ease: "power2.inOut",
           },
-          "+=0.2"
+          "+=2.5" // keep it on screen longer since it's a video animation
         );
+        
+      // Hard fallback to unmount the splash screen after 5.5s just in case GSAP hangs on mobile
+      setTimeout(() => {
+        setHidden(true);
+        window.dispatchEvent(new CustomEvent("splash-done"));
+      }, 5500);
     }, rootRef.current);
 
     const onEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        ctx.kill();
+        ctx.revert();
         setHidden(true);
         window.dispatchEvent(new CustomEvent("splash-done"));
       }
@@ -99,38 +83,22 @@ export function IntroSplash() {
   return (
     <div
       ref={rootRef}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-bg overflow-hidden"
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-black overflow-hidden transition-opacity duration-1000 ${hidden ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
       aria-label="Loading InnovateX"
     >
       <div className="ai-grid absolute inset-0 opacity-30" />
 
       <div
-        ref={glowRef}
-        className="absolute h-[80vmin] w-[80vmin] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(217,70,239,0.45), rgba(168,85,247,0.25) 40%, transparent 70%)",
-          filter: "blur(60px)",
-        }}
-      />
-
-      <div
-        ref={logoRef}
-        className="relative z-10 flex flex-col items-center gap-4"
+        ref={logoWrapRef}
+        className="absolute inset-0 z-10 flex items-center justify-center bg-black"
       >
-        <div className="relative h-32 w-32 md:h-48 md:w-48 overflow-hidden rounded-3xl glass-card-strong">
-          <Image
-            src="/images/logos/innovateX.jpg"
-            alt="InnovateX"
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 768px) 128px, 192px"
-          />
-        </div>
-        <p className="font-display text-xs uppercase tracking-[0.5em] text-purple-300/80 mt-4">
-          Innovate <span className="text-magenta">X</span>
-        </p>
+        <video 
+          src="/videos/splash.mp4" 
+          autoPlay 
+          muted 
+          playsInline 
+          className="w-full h-full object-cover" 
+        />
       </div>
 
       <p className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.3em] text-muted/60">

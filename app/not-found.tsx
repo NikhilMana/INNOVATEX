@@ -32,7 +32,7 @@ export default function NotFound() {
             href="/events/vision-x"
             className="inline-flex items-center gap-1.5 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors"
           >
-            See Vision X 2025
+            See Vision X 2026
             <ArrowRight size={14} />
           </Link>
         </div>

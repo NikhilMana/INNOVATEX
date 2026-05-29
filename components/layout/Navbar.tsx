@@ -11,9 +11,19 @@ import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const scrolled = useScrollPosition(80);
-  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const [threshold, setThreshold] = useState(80);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setThreshold(window.innerHeight * 4.5);
+    } else {
+      setThreshold(80);
+    }
+  }, [pathname]);
+
+  const scrolled = useScrollPosition(threshold);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -32,20 +42,16 @@ export function Navbar() {
         className={cn(
           "fixed inset-x-0 top-0 z-[80] transition-all duration-500 ease-out-expo",
           scrolled
-            ? "bg-bg/70 backdrop-blur-xl border-b border-white/5 py-3"
-            : "bg-transparent py-5"
+            ? "bg-[#0d0d1a]/95 backdrop-blur-md border-b border-white/10 py-2"
+            : "bg-transparent py-4"
         )}
       >
         <div className="container-x flex items-center justify-between px-6 md:px-12 lg:px-20">
           <Link
             href="/"
-            className="group flex items-center gap-2 font-display text-xl font-extrabold tracking-tight"
+            className="group flex items-center"
           >
-            <span className="relative">
-              Innovate
-              <span className="gradient-text">X</span>
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-magenta to-purple-500 transition-all duration-500 group-hover:w-full" />
-            </span>
+            <img src="/images/logos/innovatex-logo-nav.png" alt="InnovateX Logo" className="h-10 md:h-12 lg:h-14 w-auto object-contain drop-shadow-md scale-[1.4] origin-left" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -160,7 +166,7 @@ function NavLink({ item, pathname }: { item: NavItem; pathname: string }) {
             : "opacity-0 scale-95 pointer-events-none"
         )}
       >
-        <div className="glass-card-strong p-2 shadow-glow-md">
+        <div className="bg-[#110f17] border border-white/5 rounded-2xl p-2 shadow-2xl">
           {item.children?.map((child) => (
             <Link
               key={child.href}
@@ -234,9 +240,9 @@ function MobileMenu({
           <Link
             href="/"
             onClick={onClose}
-            className="font-display text-2xl font-extrabold tracking-tight"
+            className="flex items-center"
           >
-            Innovate<span className="gradient-text">X</span>
+            <img src="/images/logos/innovatex-logo-nav.png" alt="InnovateX Logo" className="h-10 md:h-12 w-auto object-contain drop-shadow-md scale-[1.4] origin-left" />
           </Link>
           <button
             onClick={onClose}

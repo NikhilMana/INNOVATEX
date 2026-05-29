@@ -9,32 +9,39 @@ export const metadata: Metadata = {
 };
 
 const data: EventPageData = {
-  title: "Arivu",
-  tagline: "Where knowledge meets curiosity",
+  title: "ARIVU",
+  tagline: "Bridging the gap in education",
   description:
-    "A peer-led knowledge-sharing initiative where students explore emerging topics in AI, ML, and computing through curated sessions, deep-dives, and open discussions.",
+    "An outreach initiative by the students of the CSE–AIML Department under InnovateX, bringing curiosity, awareness, and technology-based learning to rural and government schools.",
   logo: "/images/logos/arivulogo.jpg",
   heroGradient: "from-emerald-500 to-teal-700",
-  pillLabel: "Peer Learning · Annual",
+  pillLabel: "Outreach Initiative · Rural Education",
   meta: [
-    { label: "Format", value: "Sessions + Discussions", icon: <Calendar size={14} className="text-purple-400" /> },
-    { label: "Venue", value: "On-campus", icon: <MapPin size={14} className="text-purple-400" /> },
+    { label: "Coordinator", value: "Prakruthi D", icon: <Calendar size={14} className="text-purple-400" /> },
+    { label: "Recent Visit", value: "Govt. High School, Naguvanahalli", icon: <MapPin size={14} className="text-purple-400" /> },
   ],
   overview:
-    "Arivu — Sanskrit for 'knowledge' — is built on the idea that the fastest way to learn is to teach. Students prepare curated sessions on cutting-edge AI/ML topics and present them to peers, sparking discussion and deeper inquiry. Every session is recorded and added to the InnovateX archive.",
+    "ARIVU is an outreach initiative by the students of the CSE–AIML Department under InnovateX, created with the aim of bringing curiosity, awareness, and technology-based learning to rural and government schools. The programme focuses on making education more engaging and accessible by introducing students to concepts that go beyond their regular curriculum. ARIVU works to bridge the gap between traditional learning environments and the rapidly evolving world of science and technology, while nurturing confidence, critical thinking, and a spirit of exploration among young learners. The ARIVU programme is coordinated by Prakruthi D.\n\nAs part of this initiative, our team visited Govt. High School, Naguvanahalli, where students were engaged through sessions that blended aptitude, reasoning, and the role of AI in everyday life. Logical puzzles, quick-thinking tasks, and simple problem-solving activities helped strengthen their analytical abilities in a fun and interactive manner. Alongside this, relatable demonstrations and discussions on artificial intelligence allowed students to connect modern technology with real-life situations and understand its growing relevance.\n\nThe visit created an energetic and encouraging learning atmosphere, motivating students to participate actively, ask curious questions, and think beyond textbook boundaries. Programmes like ARIVU continue to inspire young minds, broaden their perspectives, and plant the seeds of innovation and confidence needed to explore the world of technology.",
   timeline: [
-    { phase: "Topic Pick", description: "Members propose topics they want to dive into. The community votes." },
-    { phase: "Prep", description: "Each presenter spends two weeks researching and structuring their session." },
-    { phase: "Session", description: "60-minute deep-dive — half presentation, half open discussion." },
-    { phase: "Archive", description: "Notes, slides, and recordings published to the InnovateX library." },
+    { phase: "Aptitude & Reasoning", description: "Logical puzzles, quick-thinking tasks, and simple problem-solving activities." },
+    { phase: "AI in Everyday Life", description: "Relatable demonstrations connecting modern technology with real-life situations." },
+    { phase: "Interactive Discussions", description: "Motivating students to participate actively and ask curious questions." },
+    { phase: "Mentorship", description: "Planting seeds of innovation and confidence in young learners." },
   ],
   stats: [
-    { value: "24+", label: "Sessions Hosted" },
-    { value: "12+", label: "Topic Areas" },
-    { value: "150+", label: "Active Participants" },
-    { value: "100%", label: "Student-Led" },
+    { value: "100%", label: "Student-Led Initiative" },
+    { value: "Rural", label: "Focus Area" },
+    { value: "AI & Logic", label: "Core Topics" },
+    { value: "Infinite", label: "Curiosity Sparked" },
   ],
-  ctaText: "Propose a Session",
+  gallery: [
+    "/images/events/arivu/45.jpg",
+    "/images/events/arivu/46.jpg",
+    "/images/events/arivu/47.jpg",
+    "/images/events/arivu/image (1).png",
+    "/images/events/arivu/image.png",
+  ],
+  ctaText: "Join the Initiative",
   ctaHref: "/contact",
 };
 
