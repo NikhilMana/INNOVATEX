@@ -64,7 +64,6 @@ export function VisionXPage() {
         <About />
         <Tracks />
         <Schedule />
-        <Speakers />
         <FAQs />
         <RegisterCTA />
       </main>
@@ -403,61 +402,7 @@ function SessionRow({ session }: { session: Session }) {
   );
 }
 
-function Speakers() {
-  const rootRef = useRef<HTMLElement>(null);
-  useRevealAnimation(rootRef);
 
-  return (
-    <section
-      ref={rootRef}
-      id="speakers"
-      className="relative section-padding overflow-hidden"
-    >
-      <div className="container-x relative z-10">
-        <div className="max-w-2xl mb-12 space-y-4">
-          <p
-            data-reveal
-            className="text-xs uppercase tracking-[0.3em] text-purple-400 font-display"
-          >
-            · Speakers &amp; Mentors
-          </p>
-          <h2
-            data-reveal
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
-          >
-            Voices from the <GradientText>frontier</GradientText>.
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {visionX.speakers.map((s) => (
-            <GlassCard key={s.name} data-reveal hoverable className="p-6">
-              <div className="space-y-4">
-                <div
-                  className={`h-24 w-24 rounded-2xl bg-gradient-to-br ${s.gradient} flex items-center justify-center mx-auto`}
-                >
-                  <span className="font-display text-3xl font-extrabold">
-                    {s.initials}
-                  </span>
-                </div>
-                <div className="text-center space-y-1">
-                  <h3 className="font-display text-lg font-bold">{s.name}</h3>
-                  <p className="text-xs text-purple-300">{s.designation}</p>
-                  {s.org && <p className="text-xs text-muted">{s.org}</p>}
-                </div>
-                {s.talk && (
-                  <p className="text-xs text-center text-muted italic border-t border-white/5 pt-3">
-                    &ldquo;{s.talk}&rdquo;
-                  </p>
-                )}
-              </div>
-            </GlassCard>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 
 
