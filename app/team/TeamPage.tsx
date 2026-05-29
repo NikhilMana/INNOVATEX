@@ -89,7 +89,7 @@ function CoreGrid() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {coreTeam.map((member) => (
             <MemberCard key={member.name} member={member} />
           ))}
@@ -105,7 +105,7 @@ function MemberCard({ member }: { member: TeamMember }) {
       <GlassCard hoverable className="group p-5 md:p-6">
         <div className="space-y-4">
           <div
-            className={`relative h-40 md:h-52 rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} flex items-center justify-center`}
+            className={`relative aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br ${member.gradient} flex items-center justify-center`}
           >
             {member.image ? (
               <img src={member.image} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-center" />
