@@ -222,12 +222,8 @@ export const visionX: VisionXContent = {
       q: "How do I get on-campus?",
       a: "The MIT Mysore campus is at Belawadi, Srirangapatna Taluk. Shuttle from Mysore city on the fest day — schedule on the registration page.",
     },
-    {
-      q: "Where do I stay if I'm coming from outside Mysore?",
-      a: "We have a list of partner hotels and PG accommodations near campus — sent on registration confirmation.",
-    },
   ],
 
   registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6TuL9uxv791thUJklHKpcjDONz2PP7ybOQzVwzoOiclQrpQ/viewform?usp=header",
-  brochureUrl: "/vision-x-brochure.pdf",
+  brochureUrl: "/VisionX Trifold Brochure.pdf",
 };
