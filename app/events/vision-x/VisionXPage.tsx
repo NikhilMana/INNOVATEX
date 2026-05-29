@@ -185,7 +185,7 @@ function About() {
             data-reveal
             className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
           >
-            One day. <GradientText>Three tracks</GradientText>.
+            One day. <GradientText>Two tracks</GradientText>.
             <br />
             One ecosystem of ideas.
           </h2>
@@ -554,7 +554,7 @@ function RegisterCTA() {
               Be part of <GradientText>Vision X</GradientText>.
             </h2>
             <p className="text-muted text-base md:text-xl max-w-xl mx-auto">
-              One day. Three tracks. Hundreds of builders. Lock in your seat.
+              One day. Two tracks. Hundreds of builders. Lock in your seat.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <Button size="lg" icon={<ArrowRight size={18} />}>

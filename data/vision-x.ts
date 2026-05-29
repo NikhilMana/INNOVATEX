@@ -81,7 +81,7 @@ export const visionX: VisionXContent = {
   /* TODO: confirm KPIs from brochure */
   kpis: [
     { value: "1", label: "Day" },
-    { value: "3+", label: "Flagship Events" },
+    { value: "2", label: "Flagship Events" },
     { value: "500+", label: "Expected Footfall" },
     { value: "₹50k+", label: "Prize Pool" },
   ],
