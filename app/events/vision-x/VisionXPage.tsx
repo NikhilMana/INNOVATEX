@@ -395,7 +395,7 @@ function SessionRow({ session }: { session: Session }) {
           {session.time}
         </p>
       </div>
-      <div className="col-span-6 md:col-span-7 space-y-1">
+      <div className="col-span-9 md:col-span-10 space-y-1">
         <p className="font-display font-semibold text-base md:text-lg">
           {session.title}
         </p>
@@ -408,16 +408,6 @@ function SessionRow({ session }: { session: Session }) {
             {session.venue}
           </p>
         )}
-      </div>
-      <div className="col-span-3 flex justify-end">
-        <span
-          className={cn(
-            "rounded-full px-2.5 py-1 text-[9px] uppercase tracking-widest font-display font-semibold border",
-            formatColor[session.format]
-          )}
-        >
-          {session.format}
-        </span>
       </div>
     </div>
   );
