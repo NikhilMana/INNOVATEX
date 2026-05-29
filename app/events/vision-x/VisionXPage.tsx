@@ -65,7 +65,6 @@ export function VisionXPage() {
         <Tracks />
         <Schedule />
         <Speakers />
-        <Sponsors />
         <FAQs />
         <RegisterCTA />
       </main>
@@ -480,71 +479,7 @@ function Speakers() {
   );
 }
 
-function Sponsors() {
-  const rootRef = useRef<HTMLElement>(null);
-  useRevealAnimation(rootRef);
 
-  return (
-    <section
-      ref={rootRef}
-      id="sponsors"
-      className="relative section-padding overflow-hidden"
-    >
-      <div className="container-x relative z-10">
-        <div className="max-w-2xl mb-12 space-y-4 text-center mx-auto">
-          <p
-            data-reveal
-            className="text-xs uppercase tracking-[0.3em] text-purple-400 font-display"
-          >
-            · Partners
-          </p>
-          <h2
-            data-reveal
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
-          >
-            Backed by the <GradientText>best</GradientText>.
-          </h2>
-        </div>
-
-        <div className="space-y-10">
-          {visionX.sponsorTiers.map((tier) => (
-            <div key={tier.tier} data-reveal>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-muted font-display text-center mb-4">
-                {tier.label}
-              </p>
-              <div
-                className={cn(
-                  "grid gap-4",
-                  tier.tier === "title" && "grid-cols-1 max-w-md mx-auto",
-                  tier.tier === "gold" && "grid-cols-2 md:grid-cols-3",
-                  tier.tier === "silver" && "grid-cols-2 md:grid-cols-4",
-                  tier.tier === "community" && "grid-cols-3 md:grid-cols-5"
-                )}
-              >
-                {tier.sponsors.map((sp, idx) => (
-                  <GlassCard
-                    key={idx}
-                    className={cn(
-                      "flex items-center justify-center",
-                      tier.tier === "title" && "h-28 shadow-glow-sm",
-                      tier.tier === "gold" && "h-20",
-                      tier.tier === "silver" && "h-16",
-                      tier.tier === "community" && "h-14"
-                    )}
-                  >
-                    <span className="font-display font-bold text-muted text-sm">
-                      {sp.name}
-                    </span>
-                  </GlassCard>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function FAQs() {
   const rootRef = useRef<HTMLElement>(null);

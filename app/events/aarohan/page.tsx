@@ -13,7 +13,7 @@ const data: EventPageData = {
   tagline: "Building the foundations",
   description:
     "Skill-building workshops focusing on foundational knowledge, hands-on programming, and core technologies.",
-  logo: "/images/logos/Aarohanlogo.jpg",
+  logo: "/images/logos/aarohan.jpg",
   heroGradient: "from-rose-500 to-pink-700",
   pillLabel: "Workshop · Foundational Tech",
   meta: [
