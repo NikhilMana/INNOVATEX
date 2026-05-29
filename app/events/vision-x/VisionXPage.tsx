@@ -293,18 +293,8 @@ function Tracks() {
                 className="p-6 md:p-7"
               >
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="h-12 w-12 rounded-2xl glass-card-strong flex items-center justify-center text-purple-400">
-                      <Icon size={20} />
-                    </div>
-                    <span
-                      className={cn(
-                        "rounded-full px-2.5 py-1 text-[9px] uppercase tracking-widest font-display font-semibold border",
-                        formatColor[track.format]
-                      )}
-                    >
-                      {track.format}
-                    </span>
+                  <div className="h-12 w-12 rounded-2xl glass-card-strong flex items-center justify-center text-purple-400">
+                    <Icon size={20} />
                   </div>
                   <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight">
                     {track.title}
