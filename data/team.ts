@@ -23,8 +23,8 @@ export const coreTeam: TeamMember[] = [
   { name: "K C Roopa Shetty", role: "Executive Coordinator", initials: "KR", gradient: "from-teal-400 to-emerald-600", image: "/images/team/K C Roopa Shetty.jpeg" },
   { name: "Dicken Kumar K", role: "Executive Coordinator", initials: "DK", gradient: "from-rose-400 to-red-600", image: "/images/team/Dicken Kumar K.jpeg" },
   { name: "Janavi N S", role: "Executive Coordinator", initials: "JN", gradient: "from-pink-400 to-rose-600", image: "/images/team/Janavi N S.jpeg" },
-  { name: "Kishan S Shetty", role: "Technical Coordinator", initials: "KS", gradient: "from-cyan-400 to-blue-600", image: "/images/team/Kishan S Shetty.jpg" },
+  { name: "Kishan S Shetty", role: "Technical Coordinator", initials: "KS", gradient: "from-cyan-400 to-blue-600", image: "/images/team/Kishan S Shetty.jpeg" },
   { name: "Samarth M N", role: "Technical Coordinator", initials: "SM", gradient: "from-indigo-400 to-purple-600" },
   { name: "Amith K", role: "Non-Technical Coordinator", initials: "AK", gradient: "from-amber-400 to-orange-600", image: "/images/team/Amith K.jpeg" },
-  { name: "Anvitha A", role: "Non-Technical Coordinator", initials: "AA", gradient: "from-fuchsia-400 to-pink-600" },
+  { name: "Anvitha A", role: "Non-Technical Coordinator", initials: "AA", gradient: "from-fuchsia-400 to-pink-600", image: "/images/team/Anvitha A.jpeg" },
 ];
