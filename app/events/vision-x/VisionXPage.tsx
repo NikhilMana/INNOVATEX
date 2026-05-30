@@ -264,22 +264,7 @@ function Tracks() {
           </h2>
         </div>
 
-        <div data-reveal className="flex flex-wrap gap-2 mb-10">
-          {formats.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setFilter(f.key)}
-              className={cn(
-                "rounded-full px-4 py-2 text-xs font-display font-semibold uppercase tracking-widest transition-all duration-300",
-                filter === f.key
-                  ? "bg-purple-500 text-white shadow-glow-sm"
-                  : "glass-card text-muted hover:text-white hover:border-purple-400/40"
-              )}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((track) => {
