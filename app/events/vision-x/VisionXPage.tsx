@@ -95,9 +95,9 @@ function Hero() {
 
           <h1
             data-reveal
-            className="font-display font-black tracking-tighter leading-[0.95]"
+            className="font-display font-black tracking-tighter leading-[0.95] w-full"
             style={{
-              fontSize: "clamp(4rem, 14vw, 14rem)",
+              fontSize: "clamp(2.5rem, 12vw, 14rem)",
               letterSpacing: "-0.05em",
             }}
           >
@@ -107,7 +107,7 @@ function Hero() {
 
           <p
             data-reveal
-            className="text-lg md:text-2xl text-muted max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-muted max-w-2xl mx-auto leading-relaxed text-balance"
           >
             {visionX.tagline}
           </p>

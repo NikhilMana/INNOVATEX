@@ -59,9 +59,9 @@ export function Countdown({ target }: CountdownProps) {
 function Unit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="glass-card-strong shadow-glow-sm rounded-2xl px-4 md:px-6 py-3 md:py-4 min-w-[68px] md:min-w-[88px]">
+      <div className="glass-card-strong shadow-glow-sm rounded-xl md:rounded-2xl px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 min-w-[54px] sm:min-w-[68px] md:min-w-[88px]">
         <span
-          className="block text-center font-display text-3xl md:text-5xl font-extrabold gradient-text tabular-nums"
+          className="block text-center font-display text-2xl sm:text-3xl md:text-5xl font-extrabold gradient-text tabular-nums"
           style={{ lineHeight: 1 }}
         >
           {value.toString().padStart(2, "0")}
@@ -77,7 +77,7 @@ function Unit({ value, label }: { value: number; label: string }) {
 function Sep() {
   return (
     <span
-      className="font-display text-3xl md:text-5xl font-extrabold text-purple-500/50"
+      className="font-display text-2xl sm:text-3xl md:text-5xl font-extrabold text-purple-500/50 -mt-6"
       aria-hidden
     >
       :
