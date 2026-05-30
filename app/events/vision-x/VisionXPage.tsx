@@ -88,7 +88,7 @@ function Hero() {
       <div className="absolute bottom-[5%] left-[5%] h-[45vmax] w-[45vmax] rounded-full bg-purple-700/30 blur-[120px] animate-float-slow [animation-direction:reverse] pointer-events-none" />
 
       <div className="container-x relative z-10 px-6 md:px-12 lg:px-20 py-16">
-        <div className="space-y-8 text-center max-w-5xl mx-auto">
+        <div className="space-y-8 text-center max-w-5xl mx-auto w-full flex flex-col items-center justify-center">
           <div data-reveal>
             <Pill pulsing>Department Fest 2026</Pill>
           </div>
@@ -126,8 +126,8 @@ function Hero() {
             </div>
           </div>
 
-          <div data-reveal className="flex justify-center pt-6 w-full max-w-[100vw] overflow-hidden">
-            <div className="scale-75 sm:scale-100 transform origin-center">
+          <div data-reveal className="flex justify-center pt-6 w-full max-w-full overflow-hidden">
+            <div className="scale-75 sm:scale-100 transform origin-center flex justify-center w-full">
               <Countdown target={visionX.date} />
             </div>
           </div>

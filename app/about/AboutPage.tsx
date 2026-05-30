@@ -75,7 +75,7 @@ function Hero() {
           <div className="lg:col-span-5">
             <div data-reveal className="relative aspect-square max-w-sm mx-auto rounded-3xl overflow-hidden glass-card-strong shadow-glow-md">
               <Image
-                src="/images/logos/logo.png"
+                src="/images/logos/logo.png?v=2"
                 alt="CSE AI & ML — MIT Mysore"
                 fill
                 className="object-contain p-8"
