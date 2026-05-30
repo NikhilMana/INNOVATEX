@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Download,
@@ -61,6 +62,7 @@ export function VisionXPage() {
       <Navbar />
       <main id="main">
         <Hero />
+        <Poster />
         <About />
         <Tracks />
         <Schedule />
@@ -149,6 +151,27 @@ function Hero() {
               </a>
             )}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Poster() {
+  const rootRef = useRef<HTMLElement>(null);
+  useRevealAnimation(rootRef);
+
+  return (
+    <section ref={rootRef} className="relative py-12 md:py-24 overflow-hidden">
+      <div className="container-x relative z-10 flex justify-center">
+        <div data-reveal className="relative w-full max-w-4xl h-[70vh] md:h-[85vh] rounded-3xl overflow-hidden glass-card-strong shadow-glow-lg border-white/10 bg-black/20">
+          <Image
+            src="/images/vision x poster.JPEG"
+            alt="Vision X Event Poster"
+            fill
+            sizes="(max-width: 768px) 100vw, 1024px"
+            className="object-contain"
+          />
         </div>
       </div>
     </section>
