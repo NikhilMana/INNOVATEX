@@ -82,8 +82,6 @@ export const visionX: VisionXContent = {
   kpis: [
     { value: "1", label: "Day" },
     { value: "2", label: "Flagship Events" },
-    { value: "500+", label: "Expected Footfall" },
-    { value: "₹50k+", label: "Prize Pool" },
   ],
 
   /* Tracks listed in brochure */
