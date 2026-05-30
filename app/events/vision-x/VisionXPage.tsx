@@ -148,17 +148,6 @@ function Hero() {
                 </Button>
               </a>
             )}
-            <a href={visionX.brochureUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-              <Button
-                variant="secondary"
-                size="lg"
-                icon={<Download size={16} />}
-                iconPosition="left"
-                fullWidth
-              >
-                Download Brochure
-              </Button>
-            </a>
           </div>
         </div>
       </div>

@@ -78,6 +78,7 @@ function Hero() {
                 src="/images/logos/logo.png"
                 alt="CSE AI & ML — MIT Mysore"
                 fill
+                sizes="(max-width: 768px) 100vw, 384px"
                 className="object-contain p-8"
                 priority
               />
@@ -385,6 +386,7 @@ function Faculty() {
                   src={faculty.image} 
                   alt={faculty.name}
                   fill
+                  sizes="128px"
                   className="object-cover object-top"
                 />
               </div>
