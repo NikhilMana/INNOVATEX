@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "The innovation ecosystem of the CSE AI & ML department at MIT Mysore.",
   },
   icons: {
-    icon: "/images/logos/logo.png?v=2",
+    icon: "/images/logos/logo.png",
   },
 };
 
