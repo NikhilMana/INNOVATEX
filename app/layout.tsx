@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "COSMIC",
     "Arivu",
     "Arghya",
+    "visionx AIML",
+    "visionx CSE AIML",
+    "visionx MITM",
+    "MITM CSE AIML",
   ],
   authors: [{ name: "InnovateX — MIT Mysore CSE AI & ML" }],
   openGraph: {
