@@ -89,10 +89,31 @@ function CoreGrid() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {coreTeam.map((member) => (
-            <MemberCard key={member.name} member={member} />
-          ))}
+        <div className="flex flex-col gap-4 md:gap-6 items-center">
+          {/* Row 1: 3 people */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 w-full lg:w-[75%]">
+            {coreTeam.slice(0, 3).map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+          {/* Row 2: 4 people */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+            {coreTeam.slice(3, 7).map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+          {/* Row 3: 4 people */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+            {coreTeam.slice(7, 11).map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+          {/* Row 4: 3 people */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 w-full lg:w-[75%]">
+            {coreTeam.slice(11, 14).map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
