@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Download } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { GradientText } from "@/components/ui/GradientText";
@@ -30,6 +30,7 @@ export interface EventPageData {
   gallery?: string[];
   ctaText?: string;
   ctaHref?: string;
+  guidelinesHref?: string;
 }
 
 export function EventPageTemplate({ data }: { data: EventPageData }) {
@@ -112,10 +113,26 @@ function Hero({ data }: { data: EventPageData }) {
             </div>
 
             {data.ctaHref && (
-              <div data-reveal className="pt-2">
+              <div data-reveal className="pt-2 flex flex-wrap gap-4">
                 <Button size="lg" icon={<ArrowRight size={18} />}>
                   <Link href={data.ctaHref}>{data.ctaText || "Register"}</Link>
                 </Button>
+                {data.guidelinesHref && (
+                  <a href={data.guidelinesHref} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" size="lg" icon={<Download size={16} />} iconPosition="left">
+                      Download Guidelines
+                    </Button>
+                  </a>
+                )}
+              </div>
+            )}
+            {!data.ctaHref && data.guidelinesHref && (
+              <div data-reveal className="pt-2">
+                <a href={data.guidelinesHref} target="_blank" rel="noopener noreferrer">
+                  <Button variant="secondary" size="lg" icon={<Download size={16} />} iconPosition="left">
+                    Download Guidelines
+                  </Button>
+                </a>
               </div>
             )}
           </div>
@@ -306,6 +323,13 @@ function CTA({ data }: { data: EventPageData }) {
                   {data.ctaText || "Get Involved"}
                 </Link>
               </Button>
+              {data.guidelinesHref && (
+                <a href={data.guidelinesHref} target="_blank" rel="noopener noreferrer">
+                  <Button variant="secondary" size="lg" icon={<Download size={16} />} iconPosition="left">
+                    Download Guidelines
+                  </Button>
+                </a>
+              )}
               <Link
                 href="/events"
                 className="inline-flex items-center gap-2 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors"

@@ -150,6 +150,17 @@ function Hero() {
                 </Button>
               </a>
             )}
+            <a href="/documents/vision-x-guidelines.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button
+                variant="secondary"
+                size="lg"
+                icon={<Download size={16} />}
+                iconPosition="left"
+                fullWidth
+              >
+                Download Guidelines
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -512,6 +523,11 @@ function RegisterCTA() {
                   <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer">Feedback Form</a>
                 </Button>
               )}
+              <a href="/documents/vision-x-guidelines.pdf" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="secondary" icon={<Download size={16} />} iconPosition="left">
+                  Download Guidelines
+                </Button>
+              </a>
               <Link
                 href="/events"
                 className="inline-flex items-center gap-2 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors"

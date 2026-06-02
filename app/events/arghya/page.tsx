@@ -44,6 +44,7 @@ const data: EventPageData = {
   ],
   ctaText: "Request a Workshop",
   ctaHref: "/contact",
+  guidelinesHref: "/documents/arghya-guidelines.pdf",
 };
 
 export default function Page() {
