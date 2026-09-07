@@ -114,9 +114,11 @@ function Hero({ data }: { data: EventPageData }) {
 
             {data.ctaHref && (
               <div data-reveal className="pt-2 flex flex-wrap gap-4">
-                <Button size="lg" icon={<ArrowRight size={18} />}>
-                  <Link href={data.ctaHref}>{data.ctaText || "Register"}</Link>
-                </Button>
+                <Link href={data.ctaHref}>
+                  <Button size="lg" icon={<ArrowRight size={18} />}>
+                    {data.ctaText || "Register"}
+                  </Button>
+                </Link>
                 {data.guidelinesHref && (
                   <a href={data.guidelinesHref} target="_blank" rel="noopener noreferrer">
                     <Button variant="secondary" size="lg" icon={<Download size={16} />} iconPosition="left">
@@ -318,11 +320,11 @@ function CTA({ data }: { data: EventPageData }) {
               {data.tagline}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <Button size="lg" icon={<ArrowRight size={18} />}>
-                <Link href={data.ctaHref || "/contact"}>
+              <Link href={data.ctaHref || "/contact"}>
+                <Button size="lg" icon={<ArrowRight size={18} />}>
                   {data.ctaText || "Get Involved"}
-                </Link>
-              </Button>
+                </Button>
+              </Link>
               {data.guidelinesHref && (
                 <a href={data.guidelinesHref} target="_blank" rel="noopener noreferrer">
                   <Button variant="secondary" size="lg" icon={<Download size={16} />} iconPosition="left">

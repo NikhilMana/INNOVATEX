@@ -75,8 +75,8 @@ export const navigation: NavItem[] = [
       {
         label: "COSMIC 4.0",
         href: "/magazine/cosmic-4",
-        description: "Launching soon",
-        badge: "SOON",
+        description: "Year four",
+        badge: "NEW",
       },
     ],
   },
