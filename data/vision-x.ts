@@ -63,6 +63,7 @@ export interface VisionXContent {
   registerUrl: string;
   feedbackUrl?: string;
   brochureUrl: string;
+  gallery?: string[];
 }
 
 export const visionX: VisionXContent = {
@@ -74,14 +75,21 @@ export const visionX: VisionXContent = {
   dateLong: "June 5, 2026",
   venue: "Maharaja Institute of Technology, Mysore",
 
-  /* Overview from brochure */
+  /* Overview from post */
   overview:
-    "VisionX is an inter-college technical fest organized by the Department of Computer Science and Engineering – Artificial Intelligence & Machine Learning, in association with the Student Club – Innovatex, held at Maharaja Institute of Technology, Mysore, on 5th of June 2026. It is a celebration of technology, creativity, and innovation, bringing together some of the brightest minds to compete, collaborate, and create. The fest features flagship events — Robogenesis, BrandVerse — each designed to test different dimensions of technical expertise, problem-solving, and teamwork. VisionX aims to inspire students to push boundaries, think beyond the ordinary, and showcase their talents in a dynamic and engaging environment that blends fun with learning.",
+    "VISIONX 2026: Where Innovation Met Impact. The Department of CSE - AI&ML MIT Mysore-Belavadi, in association with InnovateX, successfully organized VISIONX 2026, bringing together talented minds from various institutions to showcase innovation, creativity, and problem-solving skills.\n\nThe event featured two exciting domains: ROBOGENESIS (A platform for participants to demonstrate their expertise in robotics, automation, and intelligent systems) and BRANDVERSE: BUILD FOR MYSURU (An opportunity for students to design innovative solutions addressing real-world challenges). It served as a vibrant platform for learning, collaboration, and innovation.",
 
   /* TODO: confirm KPIs from brochure */
   kpis: [
     { value: "1", label: "Day" },
     { value: "2", label: "Flagship Events" },
+  ],
+  gallery: [
+    "/images/events/visionx/IMG_2880.JPG.jpeg",
+    "/images/events/visionx/IMG_2952.JPG.jpeg",
+    "/images/events/visionx/IMG_3220.JPG.jpeg",
+    "/images/events/visionx/IMG_6419.HEIC",
+    "/images/events/visionx/IMG_6766.JPG.jpeg",
   ],
 
   /* Tracks listed in brochure */

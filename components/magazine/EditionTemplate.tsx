@@ -100,9 +100,17 @@ function Hero({ edition }: { edition: EditionDetail }) {
               </div>
             ) : (
               <div data-reveal className="flex flex-wrap gap-4 pt-2">
-                <Button size="lg" icon={<Download size={16} />} iconPosition="left">
-                  Download PDF
-                </Button>
+                {edition.pdfLink ? (
+                  <a href={edition.pdfLink} download>
+                    <Button size="lg" icon={<Download size={16} />} iconPosition="left">
+                      Download PDF
+                    </Button>
+                  </a>
+                ) : (
+                  <Button size="lg" icon={<Download size={16} />} iconPosition="left">
+                    Download PDF
+                  </Button>
+                )}
                 <Button variant="secondary" size="lg" icon={<BookOpen size={16} />} iconPosition="left" onClick={() => document.getElementById('read-online')?.scrollIntoView({ behavior: 'smooth' })}>
                   Read Online
                 </Button>
@@ -321,9 +329,17 @@ function DownloadCTA({ edition }: { edition: EditionDetail }) {
               {edition.description}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <Button size="lg" icon={<Download size={18} />} iconPosition="left">
-                Download PDF
-              </Button>
+              {edition.pdfLink ? (
+                <a href={edition.pdfLink} download>
+                  <Button size="lg" icon={<Download size={18} />} iconPosition="left">
+                    Download PDF
+                  </Button>
+                </a>
+              ) : (
+                <Button size="lg" icon={<Download size={18} />} iconPosition="left">
+                  Download PDF
+                </Button>
+              )}
               <Button variant="secondary" size="lg" icon={<BookOpen size={18} />} iconPosition="left" onClick={() => document.getElementById('read-online')?.scrollIntoView({ behavior: 'smooth' })}>
                 Read Online
               </Button>

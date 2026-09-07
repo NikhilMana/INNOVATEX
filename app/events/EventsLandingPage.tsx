@@ -76,8 +76,8 @@ function Hero() {
 function FlagshipFeature() {
   const rootRef = useRef<HTMLElement>(null);
   useRevealAnimation(rootRef);
-  const visionX = upcomingEvents.find((e) => e.id === "vision-x");
-  if (!visionX) return null;
+  const flagship = upcomingEvents.find((e) => e.id === "hack-for-hire");
+  if (!flagship) return null;
 
   return (
     <section ref={rootRef} className="relative section-padding overflow-hidden">
@@ -95,17 +95,17 @@ function FlagshipFeature() {
                 Flagship · Upcoming
               </Badge>
               <h2 className="font-display text-5xl md:text-7xl font-extrabold tracking-tight leading-none">
-                <GradientText variant="animated">Vision X</GradientText>
+                <GradientText variant="animated">{flagship.title}</GradientText>
               </h2>
               <p className="text-purple-300 text-base md:text-lg font-medium">
-                Department Fest 2026 · June
+                {flagship.subtitle}
               </p>
               <p className="text-muted text-base leading-relaxed">
-                {visionX.description}
+                {flagship.description}
               </p>
               <div className="pt-2">
                 <Button size="lg" icon={<ArrowRight size={18} />}>
-                  <Link href="/events/vision-x">View Vision X</Link>
+                  <Link href={flagship.href}>View {flagship.title}</Link>
                 </Button>
               </div>
             </div>
@@ -114,10 +114,10 @@ function FlagshipFeature() {
               <div className="absolute inset-0 flex items-center justify-center text-center p-8">
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.4em] text-white/70 mb-3">
-                    Department Fest
+                    New Flagship
                   </p>
                   <p className="font-display text-7xl md:text-9xl font-black leading-none">
-                    VX
+                    H4H
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mt-4">
                     2026
@@ -150,7 +150,7 @@ function AllEvents() {
             data-reveal
             className="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
           >
-            Four flagship <GradientText>programs</GradientText>.
+            All flagship <GradientText>programs</GradientText>.
           </h2>
         </div>
 

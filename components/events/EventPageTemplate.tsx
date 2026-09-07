@@ -40,10 +40,10 @@ export function EventPageTemplate({ data }: { data: EventPageData }) {
       <Navbar />
       <main id="main">
         <Hero data={data} />
+        <Gallery data={data} />
         <Overview data={data} />
         <Timeline data={data} />
         <Impact data={data} />
-        <Gallery data={data} />
         <CTA data={data} />
       </main>
       <Footer />

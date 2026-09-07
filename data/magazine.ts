@@ -72,6 +72,6 @@ export const editionDetails: Record<string, EditionDetail> = {
     articles: [],
     editorialBoard: sharedBoard,
     letterFromEditor:
-      "Coming Q4 2025. Theme reveal pending.",
+      "Edition Four. A new era, a new reveal. Enjoy the latest stories from InnovateX.",
   },
 };

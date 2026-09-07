@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const data: EventPageData = {
-  title: "Arghya",
+  title: "Arghya 1.0",
   tagline: "Practical AI Tools Workshop",
   description:
     "An interactive workshop introducing practical AI tools in a simple, engaging way, adding a new layer to the learning journey.",
@@ -42,7 +42,7 @@ const data: EventPageData = {
     "/images/events/arghya/IMG_7799 (1).JPG",
     "/images/events/arghya/IMG_7989.JPG",
   ],
-  ctaText: "Request a Workshop",
+  ctaText: "View Highlights",
   ctaHref: "/contact",
   guidelinesHref: "/documents/arghya-guidelines.pdf",
 };

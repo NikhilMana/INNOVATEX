@@ -12,41 +12,16 @@ export interface UpcomingEvent {
 }
 
 export const upcomingEvents: UpcomingEvent[] = [
+
   {
-    id: "vision-x",
+    id: "hack-for-hire",
     date: "2026",
-    month: "JUNE",
-    day: "04",
-    title: "Vision X",
-    subtitle: "Department Fest 2026",
-    description:
-      "The flagship Department Fest — bringing together hackathons, talks, workshops, and a tech expo under one roof. Where tomorrow begins.",
-    href: "/events/vision-x",
+    month: "OCT",
+    day: "16-17",
+    title: "HACK for HIRE",
+    subtitle: "Innovate. Build. Get Hired.",
+    description: "A 24-hour national-level hackathon designed to give final-year students a platform to solve real-world industry problems.",
+    href: "/events/hack-for-hire",
     badge: "FLAGSHIP",
-    featured: true,
-  },
-  {
-    id: "arghya-2",
-    date: "2025",
-    month: "TBD",
-    day: "—",
-    title: "Arghya 2.0",
-    subtitle: "Speaker Series · Edition Two",
-    description:
-      "Next chapter of the speaker series — a curated lineup of industry leaders and researchers from across the AI ecosystem.",
-    href: "/events/arghya",
-    badge: "UPCOMING",
-  },
-  {
-    id: "cosmic-4",
-    date: "2025",
-    month: "Q4",
-    day: "—",
-    title: "COSMIC 4.0",
-    subtitle: "Magazine · Edition Four",
-    description:
-      "The fourth edition of our editorial publication. New themes, new voices, new stories from the InnovateX universe.",
-    href: "/magazine/cosmic-4",
-    badge: "LAUNCHING",
   },
 ];

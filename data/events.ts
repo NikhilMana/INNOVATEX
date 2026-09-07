@@ -25,7 +25,7 @@ export const events: EventEntry[] = [
   },
   {
     slug: "arghya",
-    title: "Arghya",
+    title: "Arghya 1.0",
     tagline: "Voices that shape the future",
     description:
       "A speaker series bringing industry leaders, researchers, and innovators on-campus to share insights from the frontier of AI.",
@@ -34,6 +34,18 @@ export const events: EventEntry[] = [
     href: "/events/arghya",
     status: "annual",
     highlights: ["Industry talks", "Speaker series", "Live Q&A"],
+  },
+  {
+    slug: "arghya-2",
+    title: "Arghya 2.0",
+    tagline: "Empowering Engineers with Next-Gen AI Tools",
+    description:
+      "An interactive workshop exploring the transformative potential of next-generation AI tools.",
+    logo: "/images/logos/argya.jpeg",
+    gradient: "from-blue-500 to-indigo-700",
+    href: "/events/arghya-2",
+    status: "annual",
+    highlights: ["Interactive workshop", "AI Tools", "Hands-on"],
   },
   {
     slug: "aarohan",
@@ -47,11 +59,31 @@ export const events: EventEntry[] = [
     status: "active",
     highlights: ["Workshops", "Hands-on coding", "Skill-building"],
   },
+  {
+    slug: "vision-x",
+    title: "Vision X",
+    tagline: "Cross the horizon, create the future",
+    description: "The flagship Department Fest — bringing together hackathons, talks, workshops, and a tech expo under one roof.",
+    gradient: "from-magenta to-purple-700",
+    href: "/events/vision-x",
+    status: "annual",
+    highlights: ["Hackathons", "Tech Expo", "Talks & Competitions"],
+  },
+  {
+    slug: "hack-for-hire",
+    title: "HACK for HIRE",
+    tagline: "Innovate. Build. Get Hired.",
+    description: "A 24-hour national-level hackathon designed to give final-year students a platform to solve real-world industry problems.",
+    gradient: "from-purple-500 to-indigo-700",
+    href: "/events/hack-for-hire",
+    status: "upcoming",
+    highlights: ["24-Hour Hackathon", "National Level", "Top 3 Teams"],
+  },
 ];
 
 export const stats = [
   { value: 137, suffix: "+", label: "Active Members" },
   { value: 30, suffix: "+", label: "Events Hosted" },
-  { value: 2, suffix: "", label: "Flagship Programs" },
+  { value: 3, suffix: "", label: "Flagship Programs" },
   { value: 4, suffix: "", label: "COSMIC Editions" },
 ];

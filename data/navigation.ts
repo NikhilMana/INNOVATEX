@@ -23,8 +23,17 @@ export const navigation: NavItem[] = [
       {
         label: "Vision X",
         href: "/events/vision-x",
-        description: "Department Fest 2026 — upcoming flagship",
-        badge: "FLAGSHIP",
+        description: "Department Fest 2026",
+      },
+      {
+        label: "Arghya 1.0",
+        href: "/events/arghya",
+        description: "Industry talks & speaker series",
+      },
+      {
+        label: "Arghya 2.0",
+        href: "/events/arghya-2",
+        description: "Practical AI tools workshop",
       },
       {
         label: "Arivu",
@@ -32,14 +41,15 @@ export const navigation: NavItem[] = [
         description: "Knowledge-sharing initiative",
       },
       {
-        label: "Arghya",
-        href: "/events/arghya",
-        description: "Industry talks & speaker series",
-      },
-      {
         label: "Aarohan",
         href: "/events/aarohan",
         description: "Skill-building workshops",
+      },
+      {
+        label: "HACK for HIRE",
+        href: "/events/hack-for-hire",
+        description: "Upcoming flagship event",
+        badge: "FLAGSHIP",
       },
     ],
   },

@@ -34,6 +34,7 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 import { visionX, type Session, type TrackFormat } from "@/data/vision-x";
 import { cn } from "@/lib/utils";
+import { ImageGallery } from "@/components/ui/ImageGallery";
 
 const iconMap: Record<string, LucideIcon> = {
   code: Code,
@@ -63,11 +64,11 @@ export function VisionXPage() {
       <main id="main">
         <Hero />
         <Poster />
+        <Gallery />
         <About />
         <Tracks />
         <Schedule />
         <FAQs />
-        <RegisterCTA />
       </main>
       <Footer />
     </SmoothScrollProvider>
@@ -130,7 +131,7 @@ function Hero() {
 
           <div data-reveal className="flex justify-center pt-6 w-full max-w-full overflow-hidden">
             <div className="scale-75 sm:scale-100 transform origin-center flex justify-center w-full">
-              <Countdown target={visionX.date} />
+              <Badge variant="featured">Event Concluded</Badge>
             </div>
           </div>
 
@@ -138,18 +139,9 @@ function Hero() {
             data-reveal
             className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 pt-4 w-full"
           >
-            <a href={visionX.registerUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-              <Button size="lg" icon={<ArrowRight size={18} />} fullWidth>
-                Register Now
-              </Button>
-            </a>
-            {visionX.feedbackUrl && (
-              <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" variant="secondary" fullWidth>
-                  Feedback Form
-                </Button>
-              </a>
-            )}
+            <Button size="lg" icon={<ArrowRight size={18} />} fullWidth onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}>
+              View Highlights
+            </Button>
             <a href="/documents/vision-x-guidelines.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button
                 variant="secondary"
@@ -489,54 +481,30 @@ function FAQs() {
   );
 }
 
-function RegisterCTA() {
+function Gallery() {
   const rootRef = useRef<HTMLElement>(null);
   useRevealAnimation(rootRef);
 
+  if (!visionX.gallery || visionX.gallery.length === 0) return null;
+  
   return (
-    <section
-      ref={rootRef}
-      id="register"
-      className="relative section-padding overflow-hidden"
-    >
-      <div className="container-x relative z-10">
-        <GlassCard
-          variant="conic"
-          data-reveal
-          className="relative overflow-hidden"
-        >
-          <Particles count={25} />
-          <div className="relative z-10 p-12 md:p-20 text-center space-y-6">
-            <Badge variant="featured">Limited Seats</Badge>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-              Be part of <GradientText>Vision X</GradientText>.
-            </h2>
-            <p className="text-muted text-base md:text-xl max-w-xl mx-auto">
-              One day. Two tracks. Hundreds of builders. Lock in your seat.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <Button size="lg" icon={<ArrowRight size={18} />}>
-                <a href={visionX.registerUrl} target="_blank" rel="noopener noreferrer">Register Now</a>
-              </Button>
-              {visionX.feedbackUrl && (
-                <Button size="lg" variant="secondary">
-                  <a href={visionX.feedbackUrl} target="_blank" rel="noopener noreferrer">Feedback Form</a>
-                </Button>
-              )}
-              <a href="/documents/vision-x-guidelines.pdf" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="secondary" icon={<Download size={16} />} iconPosition="left">
-                  Download Guidelines
-                </Button>
-              </a>
-              <Link
-                href="/events"
-                className="inline-flex items-center gap-2 text-sm font-display font-semibold text-purple-300 hover:text-magenta transition-colors"
-              >
-                Back to all events
-              </Link>
-            </div>
-          </div>
-        </GlassCard>
+    <section ref={rootRef} id="gallery" className="relative section-padding overflow-hidden">
+      <div className="container-x relative z-10 max-w-3xl mx-auto mb-12 text-center">
+          <p
+            data-reveal
+            className="text-xs uppercase tracking-[0.3em] text-purple-400 font-display"
+          >
+            · Highlights
+          </p>
+          <h2
+            data-reveal
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mt-4"
+          >
+            Moments from <GradientText>Vision X</GradientText>.
+          </h2>
+      </div>
+      <div className="relative overflow-hidden bg-black/50 border-y border-white/5">
+        <ImageGallery images={visionX.gallery} />
       </div>
     </section>
   );

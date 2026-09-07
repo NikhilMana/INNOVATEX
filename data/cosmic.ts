@@ -10,6 +10,7 @@ export interface CosmicEdition {
   gradient: string;
   articleCount?: number;
   pageCount?: number;
+  pdfLink?: string;
 }
 
 export const cosmicEditions: CosmicEdition[] = [
@@ -59,12 +60,14 @@ export const cosmicEditions: CosmicEdition[] = [
     slug: "cosmic-4",
     edition: "04",
     title: "COSMIC 4.0",
-    theme: "Reveal · Coming Soon",
+    theme: "Reveal",
     releaseDate: "2025",
     description:
-      "The next edition is in the works. Themes, voices, and stories — coming Q4 2025.",
+      "The fourth edition of our editorial publication. New themes, new voices, new stories from the InnovateX universe.",
     href: "/magazine/cosmic-4",
-    status: "upcoming",
+    status: "released",
     gradient: "from-magenta to-purple-600",
+    pdfLink: "/magazines/Cosmic 4.0.pdf",
+    pageCount: 44,
   },
 ];
